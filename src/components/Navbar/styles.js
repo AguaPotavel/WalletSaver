@@ -12,6 +12,10 @@ export const Container = styled.div`
         flex: 1;
         padding: 5px;
         align-items: center;
+        
+        img{
+            width: 70%;
+        }
     }
 
     .itens{
@@ -25,12 +29,13 @@ export const Container = styled.div`
             font-size: 14px;
             color: ${props=> props.theme.colors.secondary};
             font-family: 'Poppins';
-            margin: 0px 5px;
-            transition: .5s all ease;
+            margin: 0px 20  px;
+            transition: .2s all ease;
 
             &:hover{
-                color: ${props=> props.theme.colors.secondary_hover};
+                color: ${props=> props.theme.colors.accent};
                 cursor: pointer;
+                transform: scale(1.1);
             }
         }
     }
