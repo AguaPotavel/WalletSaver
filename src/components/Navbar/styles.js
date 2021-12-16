@@ -29,7 +29,7 @@ export const Container = styled.div`
             font-size: 14px;
             color: ${props=> props.theme.colors.secondary};
             font-family: 'Poppins';
-            margin: 0px 20  px;
+            margin: 0px 20px;
             transition: .2s all ease;
 
             &:hover{

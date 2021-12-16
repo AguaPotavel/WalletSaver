@@ -4,6 +4,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     flex: 1;
-    background-color: red;
+    /* background-color: red; */
     font-family: 'Poppins';
+    height: 200vh;
 `;

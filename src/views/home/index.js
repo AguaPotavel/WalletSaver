@@ -6,6 +6,8 @@ import {
 export function Home (){
     return(
     <Container>
-        Home
+        <div>
+            Home
+        </div>
     </Container>)
 }

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
+
 body {
   margin: 0;
   padding: 0;
@@ -10,6 +11,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('./assets/images/background.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 code {
