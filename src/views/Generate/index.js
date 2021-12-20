@@ -6,7 +6,7 @@ import {
 
 // fontAwesome //
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faKey } from '@fortawesome/free-solid-svg-icons'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
 export default function Generate(){
     return(
@@ -31,7 +31,7 @@ export default function Generate(){
                 <div className='add-phrase'>
                     <input placeholder={'unplat'} type={'password'}/>
                     <a className='add-button'>
-                        <FontAwesomeIcon icon={faKey}/>
+                        <FontAwesomeIcon icon={faPlus} color='white'/>
                     </a>
                     
                 </div>

@@ -36,8 +36,10 @@ export const ContentForm = styled.div`
                 display: flex;
                 flex: 1;
                 width: 15%;
-                height: 100%;
-                margin: 0px 10px;
+                min-width: 52px;
+                height: 52px;
+                border-radius: 6px;
+                margin-left:10px;
                 background-color: ${props=> props.theme.colors.primary};
                 justify-content: center;
                 align-items: center;
@@ -57,7 +59,7 @@ export const ContentForm = styled.div`
             border: 2px solid transparent;
             background-color: ${props=> props.theme.colors.secondary};
             border-radius: 6px;
-            padding: 10px;
+            padding: 15px;
             font-size: 1rem;
 
             &:focus{

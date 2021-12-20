@@ -15,6 +15,7 @@ export const Header = styled.div`
     height: 40rem;
     position: relative;
     align-items: center;
+    margin: 0px 10%;
 
     .image{
         display: flex;
@@ -30,7 +31,7 @@ export const Header = styled.div`
         flex-direction: column;
         /* margin: 0px 30px; */
         position: relative;
-        left: 130px;
+        /* left: 130px; */
         z-index: 999;
         height: 50%;
 
@@ -83,20 +84,19 @@ export const CardsContainer = styled.div`
     flex: 1;
     flex-direction: row;
     position: relative;
-    top: -120px;
     height: 400px;
     /* margin: 60px 0px; */
     align-items: center;
-    justify-content: space-between;
-    padding: 0px 30px;
+    justify-content: center;
     flex-wrap: wrap;
+    margin: 60px 0px;
 `;
 
 export const Card = styled.div`
     display: flex;
     flex-direction: column;
     flex: 1;
-    margin: 20px 0px;
+    margin: 20px 30px;
     background-color: ${props=> props.theme.colors.surface_3};
     filter: drop-shadow(0 0 0.75rem ${props=> props.theme.colors.surface_2}); 
     height: 350px;
@@ -177,7 +177,7 @@ export const Works = styled.div`
 export const Faq = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 60px 20px;
+    margin: 60px 10%;
     align-items: center ;
     
     h1{

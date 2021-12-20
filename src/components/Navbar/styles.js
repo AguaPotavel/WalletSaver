@@ -5,7 +5,7 @@ export const Container = styled.div`
     flex-direction: row;
     background-color: ${props=> props.theme.colors.surface_3};
     height: 64px;
-    padding: 0px 5%;
+    padding: 0px 10%;
     position: sticky;
 
     .logo{
