@@ -6,6 +6,7 @@ export const Container = styled.div`
     background-color: ${props=> props.theme.colors.surface_3};
     height: 64px;
     padding: 0px 5%;
+    position: sticky;
 
     .logo{
         display: flex;

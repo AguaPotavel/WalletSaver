@@ -11,6 +11,9 @@ import { Home } from './views/home'
 //-- importing Navbar --//
 import Navbar from "./components/Navbar";
 
+//-- importing Navbar --//
+import Footer from "./components/Footer";
+
 function App() {
   return (
     <BrowserRouter>
@@ -20,6 +23,7 @@ function App() {
         {/* <Route path="expenses" element={<Expenses />} /> */}
         {/* <Route path="invoices" element={<Invoices />} /> */}
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 }
