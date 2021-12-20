@@ -4,7 +4,8 @@ import {
   Route } from "react-router-dom";
 
 //-- importing view --//
-import { Home } from './views/home'
+import Home from './views/home'
+import Generate from "./views/Generate";
 
 
 
@@ -19,8 +20,8 @@ function App() {
     <BrowserRouter>
       <Navbar/>
       <Routes>
-        <Route path="/" element={<Home />} />
-        {/* <Route path="expenses" element={<Expenses />} /> */}
+        <Route exact path="/" element={<Home />} />
+        <Route path="/Generate" element={<Generate />} />
         {/* <Route path="invoices" element={<Invoices />} /> */}
       </Routes>
       <Footer/>

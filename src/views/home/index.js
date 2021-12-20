@@ -25,7 +25,7 @@ import { faKey } from '@fortawesome/free-solid-svg-icons'
 import { faBitcoin, faGithub, faGithubAlt } from '@fortawesome/free-brands-svg-icons'
 
 
-export function Home (){
+export default function Home (){
 
     const theme = useTheme()
 
