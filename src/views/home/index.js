@@ -22,7 +22,7 @@ import svg_home from '../../assets/images/svg_home.svg'
 // fontAwesome //
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faKey } from '@fortawesome/free-solid-svg-icons'
-import { faBitcoin, faGithub, faGithubAlt } from '@fortawesome/free-brands-svg-icons'
+import { faBitcoin, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 
 export default function Home (){

@@ -8,6 +8,7 @@ import {
 
 // utils //
 import { generateGuid } from '../../utils/guidGenerator'
+import { testeEncrypt } from '../../utils/encrypt'
 
 // fontAwesome //
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -23,6 +24,7 @@ export default function Generate(){
 
     const addSeed = (phrase) => {
         setSeeds([...seeds, {phrase: phrase, id: generateGuid()}])
+        testeEncrypt(phrase)
     }
 
     const removeSeed = (id) => {
