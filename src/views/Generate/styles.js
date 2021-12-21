@@ -22,6 +22,34 @@ export const ContentForm = styled.div`
         min-width: 300px;
         margin: 10px 20%;
 
+        .seed-area{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            height: 300px;
+            min-height: 300px;
+            background-color: ${props=> props.theme.colors.secondary};
+            border: 2px solid ${props=> props.theme.colors.primary};
+            padding: 10px 0px;
+            border-radius: 6px;
+
+            .seed-phrase{
+                display: flex;
+                height: 20px;
+                align-items: center;
+                border-radius: 15px;
+                padding: 5px;
+                margin: 0px 5px;
+                background-color: ${props=> props.theme.colors.primary};
+
+                label{
+                    color: white;
+                    font-size: 0.8rem;
+                    margin-right: 10px;
+                }
+            }
+        }
+
         .add-phrase{
             display: flex;
             flex-direction: row;
@@ -43,6 +71,11 @@ export const ContentForm = styled.div`
                 background-color: ${props=> props.theme.colors.primary};
                 justify-content: center;
                 align-items: center;
+
+                &:hover{
+                    cursor: pointer;
+                    filter: drop-shadow(0 0 0.75rem ${props=> props.theme.colors.primary});
+                }
             }
         }
 
@@ -64,6 +97,7 @@ export const ContentForm = styled.div`
 
             &:focus{
                 border: 2px solid ${props=> props.theme.colors.primary};
+                filter: drop-shadow(0 0 0.75rem ${props=> props.theme.colors.primary});
             }
 
             &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
