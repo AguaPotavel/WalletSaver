@@ -85,20 +85,55 @@ function validateNameWithPass(nameList, passwordList, sumValidator){
 
 }
 
+function encryptSingleWord(word, separator, separatorStep){
+    const wordNumeric = convertWordtoNumbers(word)
+    const numberLetters = word.length
+    const outputLettersQnt = 25
+    let stepDefiner = false
+
+    if((separatorStep[0] - wordNumeric[0])%2 === 0){
+        stepDefiner = true
+        console.log('par', (separatorStep[0] - wordNumeric[0]))
+    }
+
+
+
+    for(let i = 0; i < 25, i++;){
+        
+    }
+
+    console.log(wordNumeric, numberLetters)
+}
+
 // defineSeparator('tijuca')
 // console.log(convertNumberToLetter(2))
+
+function encrypt(){
+    const name = 'Pedr+'
+    const password = '2'
+    const seeds = ['teste', 'arvore', 'selp']
+
+    const separator = defineSeparator(name, password)
+    const separatorStep = defineSeparator(name, seeds[0])
+
+    encryptSingleWord('oregano', separator, separatorStep)
+    
+}
 
 
 function decrypt(){
     const name = 'Pedr+'
     const password = '2'
-    const seeds = ['teste', 'arvore', 'selp']
+    const seeds = ['oeste', 'arvore', 'selp']
 
     // mockValues //
     const sumValidation = -213
 
     // calc separator value //
     const separator = defineSeparator(name, password)
+    const separatorStep = defineSeparator(name, seeds[0])
+
+    console.log(separator, separatorStep);
 
     // validade name and password // 
     if(validateNameWithPass(convertWordtoNumbers(name), convertWordtoNumbers(password), sumValidation)){
@@ -108,7 +143,9 @@ function decrypt(){
     }
 }
 
-decrypt()
+// decrypt()
+
+encrypt()
 
 /////////////////////////////////////////////////////////////////////////////
 
