@@ -26,11 +26,12 @@ export default function Generate(){
     const [password, setPassword] = useState('')
     const [word, setWord] = useState('')
     const [seeds, setSeeds] = useState([])
-    const { setShowModal, showModal } = useModal()
+    const { setShowModal, showModal, setModalContent } = useModal()
 
 
     const addSeed = (phrase) => {
-        setSeeds([...seeds, {phrase: phrase, id: generateGuid()}])
+        setSeeds([...seeds, {phrase: phrase, id: generateGuid()}]);
+        setWord('');
     }
 
     const removeSeed = (id) => {
@@ -40,11 +41,13 @@ export default function Generate(){
         setSeeds(newSeed)
     }
 
-    useEffect(()=> {
-        console.log(seeds)
-    }, [seeds])
-
     const confirm = () =>{
+        setModalContent({
+            name,
+            password,
+            walletName,
+            seeds,
+        })
         setShowModal(!showModal)
     }
 

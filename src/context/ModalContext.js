@@ -25,8 +25,8 @@ export default function ModalProvider({ children }) {
 //   }
 
   useEffect(() => {
-    
-  }, [])
+    console.log(modalContent)
+  }, [modalContent])
 
   return (
     <ModalContext.Provider value={{ showModal, setShowModal, setModalContent, modalContent }}>
