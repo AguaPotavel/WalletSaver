@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 import {
     Container,
     Header,
@@ -14,6 +16,7 @@ import { useTheme } from 'styled-components'
 
 // Animation //
 import wallet from '../../assets/lottie/walletHome.json'
+import { animated, useSpring } from '@react-spring/web'
 
 
 // Image //
@@ -29,6 +32,16 @@ export default function Home (){
 
     const theme = useTheme()
 
+    const breath = useSpring({
+        to: { y: 0,},
+        from: { y: -8,},
+        loop: { reverse: true },
+        reverse: true,
+        config: {
+            mass: 5, tension: 350, friction: 0, duration: 2000
+        }
+      })
+
     const defaultOptions = {
         loop: true,
         autoplay: true,
@@ -42,9 +55,12 @@ export default function Home (){
     <Container>
         <Header>
             <div className='descHome'>
+                <animated.div style={breath}>
                 <h1>
                     Proteja suas carteiras
                 </h1>
+                </animated.div>
+                
                 <label>
                     De maneira simples e fácil, salve suas palavras passes através de um arquivo encryptado
                 </label>

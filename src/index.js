@@ -4,12 +4,13 @@ import './index.css';
 import App from './App';
 import { ThemeProvider } from 'styled-components'
 import { theme } from './assets/theme'
+import ModalProvider from './context/ModalContext'
 
 ReactDOM.render(
-  <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <App />
-    </ThemeProvider>
-  </React.StrictMode>,
+      <ModalProvider>
+        <App />
+      </ModalProvider>
+    </ThemeProvider>,
   document.getElementById('root')
 );

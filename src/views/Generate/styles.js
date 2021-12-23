@@ -13,7 +13,7 @@ export const ContentForm = styled.div`
     flex: 1;
     justify-content: center;
     align-items: center;
-    margin: 0px 20%;
+    margin: 10% 20%;
 
     .item{
         display: flex;
@@ -82,7 +82,7 @@ export const ContentForm = styled.div`
         label{
             color: white;
             font-family: 'Poppins';
-            font-size: 2rem;
+            font-size: 1.6rem;
             font-weight: bold;
         }
 

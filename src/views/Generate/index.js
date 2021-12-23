@@ -14,17 +14,23 @@ import { testeEncrypt } from '../../utils/encrypt'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 
+// Buttons //
+import { ButtonPrimary } from '../../components/Buttons'
+
+// context //
+import { useModal } from '../../context/ModalContext'
+
 export default function Generate(){
     const [name, setName] = useState('');
     const [walletName, setWalletName] = useState('')
     const [password, setPassword] = useState('')
     const [word, setWord] = useState('')
     const [seeds, setSeeds] = useState([])
+    const { setShowModal, showModal } = useModal()
 
 
     const addSeed = (phrase) => {
         setSeeds([...seeds, {phrase: phrase, id: generateGuid()}])
-        testeEncrypt(phrase)
     }
 
     const removeSeed = (id) => {
@@ -37,6 +43,10 @@ export default function Generate(){
     useEffect(()=> {
         console.log(seeds)
     }, [seeds])
+
+    const confirm = () =>{
+        setShowModal(!showModal)
+    }
 
     const RenderSeed = ({item}) => {
         return(
@@ -86,6 +96,11 @@ export default function Generate(){
                     })}
                 </div>
             </div>
+            <div className='item'>
+                <ButtonPrimary text={'confirmar'} action={confirm} />
+            </div>
+            
         </ContentForm>
+        
     </Container>)
 }
