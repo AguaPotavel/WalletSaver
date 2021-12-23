@@ -108,3 +108,27 @@ export const ContentForm = styled.div`
     }
 
 `;
+
+
+export const PhishingWarning = styled.div`
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    padding: 10px 0px;
+
+    .header{
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+
+        .link{
+            color: ${props=> props.theme.colors.primary};
+        }
+    }
+
+`;

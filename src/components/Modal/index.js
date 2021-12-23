@@ -16,10 +16,15 @@ import { useTheme } from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
+import { encrypt } from '../../utils/encrypt'
+
+import { useNavigate } from "react-router-dom";
+
 
 export function Modal({setShowModal, modalContent}){
     const [stepConfirmation, setStepConfirmation] = useState(0)
     const [copySuccess, setCopySuccess] = useState('');
+    const [encrypted, setEncrypted] = useState({})
     const textAreaRef = useRef(null);
 
     const nextStep = () => {
@@ -28,6 +33,7 @@ export function Modal({setShowModal, modalContent}){
 
     useEffect(()=> {
         if(stepConfirmation === 1){
+            setEncrypted(encrypt(modalContent.name, modalContent.password, modalContent.seeds))
             setTimeout(()=> nextStep(), 1800)
         }
         console.log('stepConfirmation:', stepConfirmation)
@@ -54,8 +60,11 @@ export function Modal({setShowModal, modalContent}){
     const theme = useTheme()
 
     const end = () => {
-        setShowModal(false)
+        setShowModal(false);
+        navigate('/')
     }
+
+    const navigate = useNavigate()
     
     function EncryptionConfirm(){
         return(<>
@@ -104,7 +113,7 @@ export function Modal({setShowModal, modalContent}){
                         permaneça mantendo cuidado e guardando sua carteira em
                         local seguro :)
                     </label>
-                    <textarea ref={textAreaRef} value={JSON.stringify(modalContent)}/>
+                    <textarea ref={textAreaRef} value={JSON.stringify(encrypted)} readOnly/>
                     <div className='button-confirm'>
                         {copySuccess != '' ? <ButtonSecondary text={'Fechar'} action={end}/>: <ButtonPrimary text={'copiar'} icon={'copy'} action={copyToClipboard}/>}                       
                     </div>

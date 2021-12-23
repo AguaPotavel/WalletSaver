@@ -25,7 +25,6 @@ function validatePassWithName(password, name){
     var hash_2 = CryptoJS.SHA256(name);
     var hash_3 = CryptoJS.SHA256(hash_1.toString(CryptoJS.enc.Base64) + hash_2.toString(CryptoJS.enc.Base64));
     
-    console.log('hash 3', hash_3.toString(CryptoJS.enc.Base64))
     return hash_3.toString(CryptoJS.enc.Base64)
 }
 
@@ -34,14 +33,15 @@ function validatePassWithName(password, name){
 
 export function encrypt(name, password, listWords){
     const hashPasswordWithName = validatePassWithName(name, password)
+    var hashBlock = CryptoJS.SHA256(name);
     let listEncrypted = [] 
 
     listWords.map((w)=> {
-        const encWord = encryptWithAESCryptoJS(w, hashPasswordWithName)
+        const encWord = encryptWithAESCryptoJS(w.phrase, hashPasswordWithName)
         listEncrypted.push(encWord)
     })
     
-    return { validator: hashPasswordWithName, seeds: listEncrypted}
+    return { validator: hashBlock.toString(CryptoJS.enc.Base64), seeds: listEncrypted, versionEncrypt: 1.0}
 }
 
 export function decrypt(name, password, listEncrypts, hashPass){

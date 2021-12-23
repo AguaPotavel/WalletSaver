@@ -8,6 +8,8 @@ import Home from './views/home'
 import Generate from "./views/Generate";
 
 
+import ModalProvider from "./context/ModalContext";
+
 
 //-- importing Navbar --//
 import Navbar from "./components/Navbar";
@@ -18,6 +20,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <BrowserRouter>
+    <ModalProvider>
       <Navbar/>
       <Routes>
         <Route exact path="/" element={<Home />} />
@@ -25,6 +28,7 @@ function App() {
         {/* <Route path="invoices" element={<Invoices />} /> */}
       </Routes>
       <Footer/>
+      </ModalProvider>
     </BrowserRouter>
   );
 }
