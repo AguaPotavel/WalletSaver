@@ -25,6 +25,9 @@ export const ModalArea = styled.div`
     border: 2px solid ${props=> props.theme.colors.primary};
     filter: drop-shadow(0 0 0.5rem ${props=> props.theme.colors.primary});
     padding: 10px;
+    max-width: 500px;
+    min-width: 350px;
+    max-height: 350px;
 
     @media only screen and (max-width: 900px) {
         width: 80%;
@@ -40,6 +43,9 @@ export const ModalConfirmEncryption = styled.div`
     width: 100%;
     height: 100%;
     transition: all 0.6s linear;
+    max-width: 500px;
+    min-width: 350px;
+    
 
     &.hide{
         display: none;
@@ -69,7 +75,7 @@ export const ModalConfirmEncryption = styled.div`
 
         textarea{
             width: 96%;
-            height: 200px;
+            height: 120px;
             margin: 10px 0px;
             background-color: ${props=> props.theme.colors.surface_3};
             border: 2px solid ${props=> props.theme.colors.primary};

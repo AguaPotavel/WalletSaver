@@ -9,21 +9,21 @@ import logo_svg from '../../assets/svgs/logo/logo_version_white.svg'
 export default function Navbar(){
     return(
     <Container>
-        <div className='logo'>
+        <a className='logo' href='/'>
             <img src={logo_svg}/>    
-        </div>
+        </a>
 
         <div className='itens'>
-            <a>
+            <a href='/generate'>
                 Generate
             </a>
-            <a>
+            <a href='/recover'>
                 Recover
             </a>
-            <a>
+            <a href='/about'>
                 About
             </a>
-            <a>
+            <a href='/donate'>
                 Donate
             </a>
         </div>

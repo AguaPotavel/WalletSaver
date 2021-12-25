@@ -63,14 +63,6 @@ export default function Generate(){
 
     return(
     <Container>
-        <PhishingWarning>
-            <label className='header'>
-                ALERTA DE PHISHING
-            </label>
-            <label className='header'>
-                Cuidado com Scammers, verifique sempre se está na url <label className='link'>walletsaver.io</label> antes de digitar seus dados
-            </label>
-        </PhishingWarning>
         <ContentForm>
             <div className='item'>
                 <label>

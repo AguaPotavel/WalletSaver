@@ -3,9 +3,10 @@ import {
   Routes,
   Route } from "react-router-dom";
 
-//-- importing view --//
+//-- importing views --//
 import Home from './views/home'
 import Generate from "./views/Generate";
+import Recover from "./views/Recover";
 
 
 import ModalProvider from "./context/ModalContext";
@@ -24,8 +25,8 @@ function App() {
       <Navbar/>
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/Generate" element={<Generate />} />
-        {/* <Route path="invoices" element={<Invoices />} /> */}
+        <Route path="/generate" element={<Generate />} />
+        <Route path="/recover" element={<Recover />} />
       </Routes>
       <Footer/>
       </ModalProvider>

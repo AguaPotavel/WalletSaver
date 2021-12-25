@@ -7,23 +7,6 @@ export default function ModalProvider({ children }) {
   const [showModal, setShowModal] = useState(false)
   const [modalContent, setModalContent] = useState({})
 
-//   const nullComponent = () =>{
-//       return(
-//       <div>
-//           component
-//       </div>)
-//   }
-
-//   if(showModal){
-//     function setTopo(){
-//         window.scrollTop(0);
-//     }
-//     setTimeout(()=> {
-//         window.bind('scroll', setTopo);
-//     }, 200)
-    
-//   }
-
   useEffect(() => {
     console.log(modalContent)
   }, [modalContent])

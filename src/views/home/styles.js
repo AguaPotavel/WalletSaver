@@ -16,11 +16,11 @@ export const Header = styled.div`
     position: relative;
     align-items: center;
     margin: 0px 10%;
+    flex-wrap: wrap;
 
     .image{
         display: flex;
         flex: 1;
-        margin: 0px 30px;
         justify-content: center;
         align-items: center;
     }
@@ -76,6 +76,11 @@ export const Header = styled.div`
         }
         
     }
+
+    @media (max-width: 600px)
+    {
+        height: 50rem;
+    }
 `;
 
 
@@ -89,7 +94,8 @@ export const CardsContainer = styled.div`
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 60px 0px;
+    margin: 60px 10%;
+
 `;
 
 export const Card = styled.div`
@@ -172,6 +178,18 @@ export const Works = styled.div`
         }
         
     }
+
+
+    @media (max-width: 600px)
+    {
+        .header{
+            font-size: 2.3rem;
+        }
+
+        .description{
+            font-size: 0.9rem;
+        }
+    }
 `;
 
 export const Faq = styled.div`
@@ -185,6 +203,11 @@ export const Faq = styled.div`
         font-family: 'Poppins';
         color: ${props=> props.theme.colors.secondary_hover};
         font-weight: bold;
+    }
+
+    @media (max-width: 600px)
+    {
+        margin: 60px 8%;
     }
 
 `;
@@ -212,5 +235,12 @@ export const FaqItem = styled.div`
         font-family: 'Poppins';
         color: ${props=> props.theme.colors.secondary_hover};
         width: 75%;
+    }
+
+    @media (max-width: 600px)
+    {
+        .answer{
+            width: 90%;
+        }
     }
 `;

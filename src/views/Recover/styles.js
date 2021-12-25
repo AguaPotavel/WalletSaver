@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
+
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
     flex: 1;
     min-height: 80vh;
 `;
+
 
 export const ContentForm = styled.div`
     display: flex;
@@ -50,35 +52,6 @@ export const ContentForm = styled.div`
             }
         }
 
-        .add-phrase{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-
-            input{
-                flex: 7;
-            }
-
-            .add-button{
-                display: flex;
-                flex: 1;
-                width: 15%;
-                min-width: 52px;
-                height: 52px;
-                border-radius: 6px;
-                margin-left:10px;
-                background-color: ${props=> props.theme.colors.primary};
-                justify-content: center;
-                align-items: center;
-
-                &:hover{
-                    cursor: pointer;
-                    filter: drop-shadow(0 0 0.75rem ${props=> props.theme.colors.primary});
-                }
-            }
-        }
-
         label{
             color: white;
             font-family: 'Poppins';
@@ -105,9 +78,31 @@ export const ContentForm = styled.div`
                 opacity: 0.4;
             }
         }
+
+        textarea{
+            color: white;
+            outline: none;
+            border: 2px solid transparent;
+            background-color: ${props=> props.theme.colors.secondary};
+            border-radius: 6px;
+            padding: 15px;
+            font-size: 1rem;
+            height: 120px;
+
+            &:focus{
+                border: 2px solid ${props=> props.theme.colors.primary};
+                filter: drop-shadow(0 0 0.75rem ${props=> props.theme.colors.primary});
+            }
+
+            &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                color: white;
+                opacity: 0.4;
+            }
+        }
     }
 
 `;
+
 
 
 export const PhishingWarning = styled.div`

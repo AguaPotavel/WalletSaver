@@ -3,10 +3,11 @@ import styled from 'styled-components'
 export const Container = styled.div`
     display: flex;
     flex-direction: row;
-    background-color: ${props=> props.theme.colors.surface_3};
+    background-color: ${props=> props.theme.colors.surface};
     height: 64px;
     padding: 0px 10%;
     position: sticky;
+    justify-content: space-around;
 
     .logo{
         display: flex;
@@ -27,16 +28,18 @@ export const Container = styled.div`
         align-items: center;
 
         a{
-            font-size: 14px;
-            color: ${props=> props.theme.colors.secondary};
+            font-size: 1.2rem;
+            color: ${props=> props.theme.colors.secondary_light};
             font-family: 'Poppins';
             margin: 0px 20px;
             transition: .2s all ease;
+            text-decoration: none;
 
             &:hover{
                 color: ${props=> props.theme.colors.accent};
                 cursor: pointer;
                 transform: scale(1.1);
+                border-bottom: 2px solid ${props=> props.theme.colors.accent};
             }
         }
     }

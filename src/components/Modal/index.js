@@ -9,15 +9,21 @@ import {
 import Lottie from 'react-lottie'
 import loading from '../../assets/lottie/loading_lock.json'
 
+
+// Buttons //
 import { ButtonPrimary, ButtonSecondary } from '../Buttons'
 
+// Theme import //
 import { useTheme } from 'styled-components'
 
+// Icons //
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
+// encrypt function //
 import { encrypt } from '../../utils/encrypt'
 
+// navigation //
 import { useNavigate } from "react-router-dom";
 
 

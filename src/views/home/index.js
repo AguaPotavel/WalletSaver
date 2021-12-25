@@ -15,7 +15,7 @@ import { useTheme } from 'styled-components'
 
 
 // Animation //
-import wallet from '../../assets/lottie/walletHome.json'
+import wallet from '../../assets/lottie/walletHomeGrey.json'
 import { animated, useSpring } from '@react-spring/web'
 
 
@@ -26,6 +26,9 @@ import svg_home from '../../assets/images/svg_home.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faKey } from '@fortawesome/free-solid-svg-icons'
 import { faBitcoin, faGithub } from '@fortawesome/free-brands-svg-icons'
+
+// Animation BG //
+import { TriangleBackground } from '../../components/AnimatedBackground'
 
 
 export default function Home (){
@@ -38,7 +41,7 @@ export default function Home (){
         loop: { reverse: true },
         reverse: true,
         config: {
-            mass: 5, tension: 350, friction: 0, duration: 2000
+            mass: 5, tension: 350, friction: 0, duration: 800
         }
       })
 
@@ -54,27 +57,25 @@ export default function Home (){
     return(
     <Container>
         <Header>
-            <div className='descHome'>
-                <animated.div style={breath}>
+            <animated.div className='descHome'>
                 <h1>
                     Proteja suas carteiras
                 </h1>
-                </animated.div>
-                
                 <label>
                     De maneira simples e fácil, salve suas palavras passes através de um arquivo encryptado
                 </label>
                 <button className='button'>
                     Vamos lá
                 </button>
-            </div>
-            <div className='image'>
+            </animated.div>
+            <animated.div className='image' style={breath}>
                 <Lottie 
                     options={defaultOptions}
-                    height={400}
-                    width={400}
+                    height={300}
+                    width={300}
                 />
-            </div>
+            </animated.div>
+            <TriangleBackground/>
         </Header>
         <CardsContainer>
             <Card>

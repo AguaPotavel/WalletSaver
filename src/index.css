@@ -11,10 +11,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #27173d;
-  background-image: url('./assets/images/background.svg'); 
+  background-color: #13141c;
+  /* background-image: url('./assets/images/background.svg'); 
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 }
 
 code {
