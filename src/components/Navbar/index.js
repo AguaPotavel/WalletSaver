@@ -23,8 +23,8 @@ export default function Navbar(){
             <a href='/about'>
                 About
             </a>
-            <a href='/donate'>
-                Donate
+            <a href='/contact'>
+                Contact
             </a>
         </div>
     </Container>)

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 import {
     Container,
@@ -22,16 +22,20 @@ import { animated, useSpring } from '@react-spring/web'
 // Image //
 import svg_home from '../../assets/images/svg_home.svg'
 
+// layout //
+import  Navbar  from '../../components/Navbar'
+import  Footer  from '../../components/Footer'
+
 // fontAwesome //
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faKey } from '@fortawesome/free-solid-svg-icons'
 import { faBitcoin, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 // Animation BG //
-import { TriangleBackground } from '../../components/AnimatedBackground'
+import { BackgroundHome } from '../../components/AnimatedBackground'
 
 
-export default function Home (){
+export default function Home(){
 
     const theme = useTheme()
 
@@ -54,7 +58,8 @@ export default function Home (){
         }
       };
 
-    return(
+    return(<>
+    <Navbar/>
     <Container>
         <Header>
             <animated.div className='descHome'>
@@ -75,7 +80,7 @@ export default function Home (){
                     width={300}
                 />
             </animated.div>
-            <TriangleBackground/>
+            <BackgroundHome/>
         </Header>
         <CardsContainer>
             <Card>
@@ -150,5 +155,7 @@ export default function Home (){
             </FaqItem>
         </Faq>
         
-    </Container>)
+    </Container>
+    <Footer/>
+    </>)
 }

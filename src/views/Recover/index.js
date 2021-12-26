@@ -13,6 +13,13 @@ import { ButtonPrimary } from '../../components/Buttons'
 // toast //
 import { ToastContainer, toast } from 'react-toastify';
 
+// layout //
+import  Navbar  from '../../components/Navbar'
+import  Footer  from '../../components/Footer'
+
+// backgroundAnimation // 
+import { BackgroundRecover } from '../../components/AnimatedBackground';
+
 
 export default function Recover(){
     const [ name, setName ] = useState('')
@@ -41,7 +48,7 @@ export default function Recover(){
     }
 
     return(<>
-    
+    <Navbar/>
     <Container>
         <ContentForm>
             <div className='item'>
@@ -68,7 +75,9 @@ export default function Recover(){
             </div>
             
         </ContentForm>
+        <BackgroundRecover/>
     </Container>
     <ToastContainer role='success'/>
+    <Footer/>
     </>)
 }

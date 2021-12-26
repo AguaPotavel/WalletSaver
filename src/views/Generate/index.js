@@ -6,10 +6,17 @@ import {
     PhishingWarning
 } from './styles'
 
+// backgroundAnimation //
+import { BackgroundGenerate } from '../../components/AnimatedBackground'
+
 
 // utils //
 import { generateGuid } from '../../utils/guidGenerator'
 import { testeEncrypt } from '../../utils/encrypt'
+
+// layout //
+import  Navbar  from '../../components/Navbar'
+import  Footer  from '../../components/Footer'
 
 // fontAwesome //
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -61,7 +68,8 @@ export default function Generate(){
         )}
 
 
-    return(
+    return(<>
+    <Navbar/>
     <Container>
         <ContentForm>
             <div className='item'>
@@ -105,6 +113,8 @@ export default function Generate(){
             </div>
             
         </ContentForm>
-        
-    </Container>)
+        <BackgroundGenerate/>
+    </Container>
+    <Footer/>
+    </>)
 }

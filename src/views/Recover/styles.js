@@ -6,6 +6,8 @@ export const Container = styled.div`
     flex-direction: column;
     flex: 1;
     min-height: 80vh;
+    overflow: hidden;
+    position: relative;
 `;
 
 

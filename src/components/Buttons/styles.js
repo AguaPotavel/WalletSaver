@@ -21,7 +21,13 @@ export const Container = styled.div`
     
 
     .content{
+        display: flex;
+        /* padding: 5px; */
         margin: 0px 5px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
     }
 
     &.sm{

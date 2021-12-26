@@ -5,6 +5,8 @@ export const Container = styled.div`
     flex-direction: column;
     flex: 1;
     min-height: 80vh;
+    position: relative;
+    overflow: hidden;
 `;
 
 export const ContentForm = styled.div`
