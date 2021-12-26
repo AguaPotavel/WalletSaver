@@ -20,13 +20,13 @@ import Lottie from 'react-lottie'
 
 // animations lottie// 
 import ScrollDown from '../../assets/lottie/scrollDown.json'
-import Computer from '../../assets/lottie/computer_blue_fraud.json'
+import Computer from '../../assets/lottie/computerGreen.json'
 import HardWallet from '../../assets/lottie/hardWallet.json'
 import Encryption from '../../assets/lottie/encryption.json'
 
 
 // animations css //
-import { SingleCircle } from '../../components/AnimatedBackground'
+import { SingleCircle, BackgroundRecover, SingleTriangle, IconsScrolling } from '../../components/AnimatedBackground'
 import { animated, useSpring } from '@react-spring/web'
 
 // theme //
@@ -113,8 +113,9 @@ export default function About(){
                         </div>
                     </Page1>
                     </ParallaxLayer>
+                    
                     <ParallaxLayer offset={0} speed={1.5} style={{ display: 'flex' }}>
-                        <SingleCircle/>
+                        <SingleTriangle position={'left'}/>
                     </ParallaxLayer>
                 
                     <ParallaxLayer offset={1} speed={2} style={{ backgroundColor: theme.colors.accent }} />
@@ -145,6 +146,10 @@ export default function About(){
                             </animated.div>
                         </div>
                     </Page2>
+                    </ParallaxLayer>
+
+                    <ParallaxLayer offset={3} speed={1.8} style={{ display: 'flex' }}>
+                        <IconsScrolling/>
                     </ParallaxLayer>
 
                     <ParallaxLayer

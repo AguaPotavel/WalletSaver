@@ -95,7 +95,7 @@ export default function Generate(){
                     Palavra:
                 </label>
                 <div className='add-phrase'>
-                    <input placeholder={'unplat'} type={'text'} onChange={text => setWord(text.target.value)}/>
+                    <input placeholder={'unplat'} type={'text'} value={word} onChange={text => setWord(text.target.value)}/>
                     <a className='add-button' onClick={()=> addSeed(word)}>
                         <FontAwesomeIcon icon={faPlus} color='white' />
                     </a>

@@ -22,17 +22,23 @@ function decryptWithAESCryptoJS(word, hashPass){
 
 function validatePassWithName(password, name){
     var hash_1 = CryptoJS.SHA256(password);
+    // console.log('hash 1', hash_1.toString(CryptoJS.enc.Base64))
     var hash_2 = CryptoJS.SHA256(name);
     var hash_3 = CryptoJS.SHA256(hash_1.toString(CryptoJS.enc.Base64) + hash_2.toString(CryptoJS.enc.Base64));
-    
+    console.log('hash_1, hash_2, hash_3', hash_1.toString(CryptoJS.enc.Base64), hash_2.toString(CryptoJS.enc.Base64), hash_3.toString(CryptoJS.enc.Base64))
     return hash_3.toString(CryptoJS.enc.Base64)
 }
 
-// validatePassWithName('snha', 'name')
+function validatePassWithHash(password, validator){
+    var hash_1 = CryptoJS.SHA256(password);
+    var hash_3 = CryptoJS.SHA256(hash_1.toString(CryptoJS.enc.Base64) + validator);
+    console.log('hash_1, hash_2', hash_1.toString(CryptoJS.enc.Base64), hash_3.toString(CryptoJS.enc.Base64))
+    return hash_3.toString(CryptoJS.enc.Base64)
+}
 
 
 export function encrypt(name, password, listWords){
-    const hashPasswordWithName = validatePassWithName(name, password)
+    const hashPasswordWithName = validatePassWithName(password, name)
     var hashBlock = CryptoJS.SHA256(name);
     let listEncrypted = [] 
 
@@ -44,10 +50,13 @@ export function encrypt(name, password, listWords){
     return { validator: hashBlock.toString(CryptoJS.enc.Base64), seeds: listEncrypted, versionEncrypt: 1.0}
 }
 
-export function decrypt(name, password, listEncrypts, hashPass){
-    const hashPasswordWithName = validatePassWithName(name, password)
+export function decrypt(name, password, listEncrypts, validator){
+    const hashPasswordWithName = validatePassWithName(password, name)
+    const withValidator = validatePassWithHash(password, validator)
 
-    if(hashPass === hashPasswordWithName){
+    console.log(hashPasswordWithName, withValidator)
+
+    if(hashPasswordWithName === withValidator){
         let listDecrypted = []
         listEncrypts.map((w)=> {
             const encWord = decryptWithAESCryptoJS(w, hashPasswordWithName)

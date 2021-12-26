@@ -20,17 +20,39 @@ import  Footer  from '../../components/Footer'
 // backgroundAnimation // 
 import { BackgroundRecover } from '../../components/AnimatedBackground';
 
+// Decrypt function // 
+import { decrypt } from '../../utils/encrypt';
+
 
 export default function Recover(){
     const [ name, setName ] = useState('')
     const [ password, setPassword ] = useState('')
     const [ encrypted, setEncrypted] = useState('')
+    const [ seeds, setSeeds ] = useState('')
+    const [ stringSeeds, setStringSeeds] = useState('')
 
 
     const confirm = () => {
-        console.log('confirmado')
+        // console.log('confirmado')
         try{
             const data = JSON.parse(encrypted)
+            const response = decrypt(name, password, data.seeds, data.validator)
+            if(response){
+                console.log(response)
+                setSeeds(response.seeds)
+                setStringSeeds(response.seeds.join(' '))
+
+            }else{
+                toast.dark('Senha ou nome inválido!', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    });
+            }
         }catch(e){
             toast.dark('Envie um Json válido', {
                 position: "top-right",
@@ -42,10 +64,11 @@ export default function Recover(){
                 progress: undefined,
                 });
         }
-        
-        
-        
     }
+
+    useEffect(()=> {
+        console.log(seeds)
+    }, [seeds])
 
     return(<>
     <Navbar/>
@@ -73,6 +96,15 @@ export default function Recover(){
             <div className='item'>
                 <ButtonPrimary text={'confirmar'} action={confirm} />
             </div>
+
+            {stringSeeds !== '' && (
+            <div className='item'>
+                <label>
+                    Seeds:
+                </label>
+                <textarea placeholder='seeds' defaultValue={'words'} value={stringSeeds} readOnly/>
+            </div>)}
+            
             
         </ContentForm>
         <BackgroundRecover/>
