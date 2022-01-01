@@ -29,6 +29,24 @@ export const Container = styled.div`
         min-width: 400px;
         text-align: end;
     }
+
+    @media (max-width: 600px)
+    {
+        height: 400px;
+
+        .left,
+        .right{
+            min-width: 300px;
+        }
+
+        .left{
+            margin-left: 5%;
+        }
+
+        .right{
+            margin-right: 5%;
+        }
+    }
 `;
 
 export const Contact = styled.div`
@@ -50,6 +68,12 @@ export const Contact = styled.div`
         color: ${props=> props.theme.colors.secondary};
         font-weight: normal;
         margin: 20px 5px 20px 5px;
+
+        @media (max-width: 600px)
+        {
+            margin: 10px 5px 10px 5px;
+            font-size: 0.8rem;
+        }
     }
 
     .icons{
@@ -73,5 +97,15 @@ export const Contact = styled.div`
                opacity: 1;
            }
         }
+
+        @media (max-width: 600px)
+        {
+            min-width: 100px;
+        }
+    }
+
+    @media (max-width: 600px)
+    {
+        min-width: 100px;
     }
 `;
