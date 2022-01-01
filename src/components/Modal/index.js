@@ -3,7 +3,8 @@ import { useState, useEffect, useRef } from 'react'
 import {
     Container,
     ModalArea,
-    ModalConfirmEncryption
+    ModalConfirmEncryption,
+    ModalPhishingAlert
 } from './styles'
 
 import Lottie from 'react-lottie'
@@ -71,6 +72,22 @@ export function Modal({setShowModal, modalContent}){
     }
 
     const navigate = useNavigate()
+
+    function PhishingAlert(){
+        return(<>
+        <ModalPhishingAlert>
+            <div className='close-button' onClick={()=> setShowModal(false)}>
+                <FontAwesomeIcon icon={faTimes} size='1x' color={theme.colors.primary}/>
+            </div>
+            <h2>
+                Cuidado!
+            </h2>
+            <label>
+                Sempre antes de preencher qualquer dado verifique se realmente está no domínio correto, <a>https://walletsaver.io</a>
+            </label>
+        </ModalPhishingAlert>
+        </>)
+    }
     
     function EncryptionConfirm(){
         return(<>

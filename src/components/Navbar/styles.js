@@ -51,3 +51,19 @@ export const Container = styled.div`
     }
 
 `;
+
+export const ContainerMobile = styled.div`
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    background-color: ${props=> props.theme.colors.surface};
+    height: 64px;
+    /* padding: 0px 10%; */
+
+    
+
+    .itens{
+        position: relative;
+    }
+`

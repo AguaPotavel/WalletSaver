@@ -70,6 +70,19 @@ export default function Recover(){
         console.log(seeds)
     }, [seeds])
 
+    useEffect(()=> {
+        toast.dark('Sempre verifique se está no dominio correto: https://walletsaver.io', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: false,
+            progress: undefined,
+            type: 'warning'
+            });
+    }, [])
+
     return(<>
     <Navbar/>
     <Container>

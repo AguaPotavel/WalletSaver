@@ -1,5 +1,8 @@
+import React, { useEffect, useState } from 'react';
+
 import { 
-    Container
+    Container,
+    ContainerMobile
 } from './styles'
 
 import logo_svg from '../../assets/svgs/logo/logo_version_white.svg' 
@@ -7,8 +10,23 @@ import logo_svg from '../../assets/svgs/logo/logo_version_white.svg'
 
 
 export default function Navbar(){
-    return(
-    <Container>
+    const [height, setHeight] = useState();
+    const [width, setWidth] = useState();
+
+    function getWindowDimensions() {
+        const { innerWidth: width, innerHeight: height } = window;
+        setHeight(height);
+        setWidth(width);
+      }
+    
+      useEffect(() => {
+        getWindowDimensions();
+        window.addEventListener("resize", getWindowDimensions);
+      }, []);
+
+
+    return(<>
+        {width > 500 ? <Container>
         <a className='logo' href='/'>
             <img src={logo_svg}/>    
         </a>
@@ -27,5 +45,11 @@ export default function Navbar(){
                 Contact
             </a>
         </div>
-    </Container>)
+    </Container>:
+    <ContainerMobile>
+
+    </ContainerMobile>
+    }
+    
+    </>)
 }

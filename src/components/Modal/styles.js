@@ -35,6 +35,30 @@ export const ModalArea = styled.div`
 `;
 
 
+export const ModalPhishingAlert = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    h2{
+        font-size: 2rem;
+        color: ${props=> props.theme.colors.warning};
+        font-weight: bold;
+        margin: 0px 5px;
+    }
+
+    label{
+        font-size: 2rem;
+        color: ${props=> props.theme.colors.secondary_hover};
+        font-weight: bold;
+        margin: 0px 5px;
+    }
+
+`;
+
+
 export const ModalConfirmEncryption = styled.div`
     display: flex;
     flex-direction: column;
@@ -155,7 +179,7 @@ export const ModalConfirmEncryption = styled.div`
 
             label{
                 font-size: 0.9rem;
-                color: ${props=> props.theme.colors.secondary};
+                color: ${props=> props.theme.colors.secondary_hover};
                 font-weight: bold;
                 margin: 0px 5px;
             }
