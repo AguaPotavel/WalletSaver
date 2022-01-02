@@ -1,0 +1,21 @@
+{
+    "pt": {
+        "homeStrings":{
+            "header": {
+                "title": "Proteja suas carteiras",
+                "description": "De maneira simples e fácil, salve suas palavras passes através de um arquivo encryptado",
+                "button": "Vamos lá"
+            },
+            "cards":{
+                "card_1": "Salve todas as suas carteiras, sem tem que salvar as palavras 'seed'.",
+                "card_2": "Totalmente sem custo, pensado para facilitar a vida do usuário comum",
+                "card_3": "Seguro com código aberto no github, livre para acesso"
+            },
+            "works": {
+                "title": "Como funciona?",
+                "description": "Através de uma ferramenta simples, você poderá salvar um arquivo em formato 'txt', com as suas palavras de recuperação da carteira, só que encryptada por uma senha sua!",
+                "button": "Assista um vídeo!"
+            }
+        }
+    }
+}

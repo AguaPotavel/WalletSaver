@@ -34,6 +34,14 @@ import { faBitcoin, faGithub } from '@fortawesome/free-brands-svg-icons'
 // Animation BG //
 import { BackgroundHome } from '../../components/AnimatedBackground'
 
+// Localization //
+import LocalizedStrings from 'react-localization';
+import siteStrings from '../../utils/siteStrings.json'
+let strings = new LocalizedStrings(
+    siteStrings
+   );
+strings.setLanguage('pt')
+
 
 export default function Home(){
 
@@ -64,13 +72,13 @@ export default function Home(){
         <Header>
             <animated.div className='descHome'>
                 <h1>
-                    Proteja suas carteiras
+                    {strings.homeStrings.header.title}
                 </h1>
                 <label>
-                    De maneira simples e fácil, salve suas palavras passes através de um arquivo encryptado
+                    {strings.homeStrings.header.description}
                 </label>
                 <button className='button'>
-                    Vamos lá
+                    {strings.homeStrings.header.button}
                 </button>
             </animated.div>
             <animated.div className='image' style={breath}>
@@ -86,33 +94,32 @@ export default function Home(){
             <Card>
                 <FontAwesomeIcon icon={faKey} color={theme.colors.primary} size='4x'/>
                 <label className='description'>
-                    Salve todas as suas carteiras, sem tem que salvar as palavras "seed".
+                    {strings.homeStrings.cards.card_1}
                 </label>
             </Card>
             <Card>
                 <FontAwesomeIcon icon={faBitcoin} color={theme.colors.primary} size='4x'/>
                 <label className='description'>
-                    Totalmente sem custo, pensado para facilitar a vida do usuário comum
+                    {strings.homeStrings.cards.card_2}
                 </label>
             </Card>
             <Card>
             <FontAwesomeIcon icon={faGithub} color={theme.colors.primary} size='4x'/>
                 <label className='description'>
-                    Seguro com código aberto no github, livre para acesso
+                    {strings.homeStrings.cards.card_3}
                 </label>
             </Card>
 
         </CardsContainer>
         <Works>
             <label className='header'>
-                Como funciona?
+                {strings.homeStrings.works.title}
             </label>
             <label className='description'>
-                Através de uma ferramenta simples, você poderá salvar um arquivo em formato "txt", com as suas palavras
-                de recuperação da carteira, só que encryptada por uma senha sua!
+                {strings.homeStrings.works.description}
             </label>
             <button className='button'>
-                Assista um vídeo!
+                {strings.homeStrings.works.button}
             </button>
         </Works>
         <Faq>

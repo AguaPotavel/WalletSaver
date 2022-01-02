@@ -40,7 +40,7 @@ export default function Navbar(){
 
 
     return(<>
-        {width > 500 ? <Container>
+        {width > 600 ? <Container>
         <a className='logo' href='/'>
             <img src={logo_svg}/>    
         </a>
