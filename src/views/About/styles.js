@@ -67,6 +67,23 @@ export const Page1 = styled.div`
         justify-content: center;
     }
 
+    @media (max-width: 600px)
+    {
+        margin: 0px 5%;
+
+        .text{
+
+            h1{
+                font-size: 3rem;
+            }
+
+            label{
+                font-size: 1rem;
+            }
+            
+        }
+    }
+
 `;
 
 
@@ -148,6 +165,33 @@ export const Page2 = styled.div`
             height: 100%;
             align-items: center;
             justify-content: center;
+        }
+    }
+
+
+    @media (max-width: 600px)
+    {
+        margin: 0px 5%;
+        width: 90%;
+
+        .text{
+
+            h1{
+                font-size: 3rem;
+            }
+
+            label{
+                font-size: 1rem;
+            }
+            
+            margin-bottom: 60px;
+        }
+
+        .image{
+
+            &:before{
+                height: 300px;
+            }
         }
     }
 
@@ -236,6 +280,31 @@ export const Page3 = styled.div`
         }
     }
 
+    @media (max-width: 600px)
+    {
+        margin: 0px 5%;
+        width: 90%;
+
+        .text{
+
+            h1{
+                font-size: 3rem;
+            }
+
+            label{
+                font-size: 1rem;
+            }
+            
+            margin-bottom: 60px;
+        }
+
+        /* .image{
+
+            &:before{
+                height: 300px;
+            }
+        } */
+    }
 `;
 
 export const Page4 = styled.div`
@@ -335,6 +404,32 @@ export const Page4 = styled.div`
             align-items: center;
             justify-content: center;
         }
+    }
+
+    @media (max-width: 600px)
+    {
+        margin: 0px 5%;
+        width: 90%;
+
+        .text{
+
+            h1{
+                font-size: 3rem;
+            }
+
+            label{
+                font-size: 1rem;
+            }
+            
+            margin-bottom: 60px;
+        }
+
+        /* .image{
+
+            &:before{
+                height: 300px;
+            }
+        } */
     }
 
 `;
@@ -442,6 +537,33 @@ export const Page5 = styled.div`
         }
     }
 
+    @media (max-width: 600px)
+    {
+        margin: 0px 5%;
+        width: 90%;
+        height: auto;
+
+        .text{
+
+            h1{
+                font-size: 3rem;
+            }
+
+            label{
+                font-size: 1rem;
+            }
+            
+            margin-bottom: 60px;
+        }
+
+        /* .image{
+
+            &:before{
+                height: 300px;
+            }
+        } */
+    }
+
 `;
 
 
@@ -521,6 +643,33 @@ export const Page6 = styled.div`
         }
     }
 
+
+    @media (max-width: 600px)
+    {
+        margin: 0px 2%;
+        width: 90%;
+        height: auto;
+
+        .text{
+
+            h1{
+                font-size: 2.5rem;
+            }
+
+            label{
+                font-size: 0.8rem;
+            }
+            
+            margin-bottom: 60px;
+        }
+
+        /* .image{
+
+            &:before{
+                height: 300px;
+            }
+        } */
+    }
     
 
 `;

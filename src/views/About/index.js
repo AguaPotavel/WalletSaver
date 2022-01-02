@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from 'react'
+
 
 import { 
     WrapperParallax,
@@ -39,6 +41,19 @@ import { ButtonPrimary } from '../../components/Buttons'
 
 
 export default function About(){
+    const [height, setHeight] = useState();
+    const [width, setWidth] = useState();
+
+    function getWindowDimensions() {
+        const { innerWidth: width, innerHeight: height } = window;
+        setHeight(height);
+        setWidth(width);
+      }
+    
+      useEffect(() => {
+        getWindowDimensions();
+        window.addEventListener("resize", getWindowDimensions);
+      }, []);
 
     const theme = useTheme()
 
@@ -104,11 +119,20 @@ export default function About(){
                                 para isso criei carteiras diferentes para que eu não caia em um <label className='important'>SCAM</label>, ou se cair não perder tudo que possuo, porém com isso acabo tendo que guardar muitas carteiras com suas respectivas palavras seeds, e como guardar elas com segurança?
                             </label>
                             <animated.div className='anim' style={move}>
-                                <Lottie 
-                                    options={defaultOptions}
-                                    height={120}
-                                    width={120}
-                                />
+                                {width >= 600 && (
+                                    <Lottie 
+                                        options={defaultOptions}
+                                        height={120}
+                                        width={120}
+                                    />
+                                )}
+                                {width < 600 && (
+                                    <Lottie 
+                                        options={defaultOptions}
+                                        height={100}
+                                        width={100}
+                                    />
+                                )}
                             </animated.div>
                         </div>
                     </Page1>
@@ -138,11 +162,20 @@ export default function About(){
                         </div>
                         <div className='image'>
                             <animated.div className='anim' style={move}>
-                                <Lottie 
-                                    options={computerOptions}
-                                    height={600}
-                                    width={600}
-                                />
+                                {width >= 600 && (
+                                    <Lottie 
+                                        options={computerOptions}
+                                        height={600}
+                                        width={600}
+                                    />
+                                )}
+                                {width < 600 && (
+                                    <Lottie 
+                                        options={computerOptions}
+                                        height={300}
+                                        width={300}
+                                    />
+                                )}
                             </animated.div>
                         </div>
                     </Page2>
@@ -159,11 +192,20 @@ export default function About(){
                     <Page3>
                         <div className='image'>
                             <animated.div className='anim' style={move}>
-                                <Lottie 
-                                    options={hardWalletOptions}
-                                    height={600}
-                                    width={600}
-                                />
+                                {width >= 600 && (
+                                    <Lottie 
+                                        options={hardWalletOptions}
+                                        height={600}
+                                        width={600}
+                                    />
+                                )}
+                                {width < 600 && (
+                                    <Lottie 
+                                        options={hardWalletOptions}
+                                        height={300}
+                                        width={300}
+                                    />
+                                )}
                             </animated.div>
                         </div>
                         <div className='text'>
@@ -195,11 +237,20 @@ export default function About(){
                         </div>
                         <div className='image'>
                             <animated.div className='anim' style={move}>
-                                <Lottie 
-                                    options={encryptionOptions}
-                                    height={600}
-                                    width={600}
-                                />
+                                 {width >= 600 && (
+                                    <Lottie 
+                                        options={encryptionOptions}
+                                        height={600}
+                                        width={600}
+                                    />
+                                )}
+                                {width < 600 && (
+                                    <Lottie 
+                                        options={encryptionOptions}
+                                        height={300}
+                                        width={300}
+                                    />
+                                )}
                             </animated.div>
                         </div>
                     </Page4>
@@ -211,9 +262,17 @@ export default function About(){
                     <Page5>
                         <div className='text'>
                             <h1>Assista como funciona</h1>
-                            <div className='player'>
-                                <ReactPlayer url={'https://www.youtube.com/watch?v=-RzTiV18vQk'} controls={true}/>
-                            </div>
+                            {width >= 600 && (
+                                    <div className='player'>
+                                        <ReactPlayer url={'https://www.youtube.com/watch?v=-RzTiV18vQk'} controls={true} />
+                                    </div>
+                                )}
+                                {width < 600 && (
+                                    <div className='player'>
+                                        <ReactPlayer url={'https://www.youtube.com/watch?v=-RzTiV18vQk'} controls={true} width={300} height={200}/>
+                                    </div>
+                                )}
+                            
                         </div>
                     </Page5>
                     </ParallaxLayer>

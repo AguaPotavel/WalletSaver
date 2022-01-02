@@ -12,7 +12,7 @@ import { BackgroundGenerate } from '../../components/AnimatedBackground'
 
 // utils //
 import { generateGuid } from '../../utils/guidGenerator'
-import { testeEncrypt } from '../../utils/encrypt'
+import { ToastContainer, toast } from 'react-toastify';
 
 // layout //
 import  Navbar  from '../../components/Navbar'
@@ -35,6 +35,19 @@ export default function Generate(){
     const [word, setWord] = useState('')
     const [seeds, setSeeds] = useState([])
     const { setShowModal, showModal, setModalContent } = useModal()
+
+    useEffect(()=> {
+        toast.dark('Sempre verifique se está no dominio correto: https://walletsaver.io', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: false,
+            progress: undefined,
+            type: 'warning'
+            });
+    }, [])
 
 
     const addSeed = (phrase) => {
@@ -116,5 +129,6 @@ export default function Generate(){
         <BackgroundGenerate/>
     </Container>
     <Footer/>
+    <ToastContainer role='success'/>
     </>)
 }
