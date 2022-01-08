@@ -124,40 +124,30 @@ export default function Home(){
         </Works>
         <Faq>
             <h1>
-                Perguntas frequentes
+                {strings.homeStrings.faq.faq_title}
             </h1>
             <FaqItem>
                 <label className='question'>
-                    É seguro?
+                    {strings.homeStrings.faq.item_1.question}
                 </label>
                 <label className='answer'>
-                    Salvando o arquivo cryptografado mesmo que alguém tenha acesso ao seu computador, e tenha
-                    o seu arquivo ele não terá acesso as suas palavras passe, pois não terá sua senha!
+                    {strings.homeStrings.faq.item_1.answer}
                 </label>
             </FaqItem>
             <FaqItem>
                 <label className='question'>
-                    Como posso confiar no site?
+                    {strings.homeStrings.faq.item_2.question}
                 </label>
                 <label className='answer'>
-                    Wallet Saver não salva qualquer informação, pois ao cryptografar o site não retem suas informações, o algoritmo
-                    simplesmente faz a cryptografia e disponibiliza para ti o download do seu arquivo.
+                    {strings.homeStrings.faq.item_2.answer}
                 </label>
             </FaqItem>
             <FaqItem>
                 <label className='question'>
-                    Mesmo assim não confio no site, como posso utilizar então?
+                    {strings.homeStrings.faq.item_3.question}
                 </label>
                 <label className='answer'>
-                    Se você não confia no site, pode verificar todo o código do site no <a>github</a> e tirar suas conclusões, ou então retire algumas palavras para validar o funcionamento!
-                </label>
-            </FaqItem>
-            <FaqItem>
-                <label className='question'>
-                    Oque acontece se o site não existir mais?
-                </label>
-                <label className='answer'>
-                    O código está no <a>github</a>, oque torna fácil vc utilizar!
+                    {strings.homeStrings.faq.item_3.answer}
                 </label>
             </FaqItem>
         </Faq>

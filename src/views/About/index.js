@@ -113,10 +113,9 @@ export default function About(){
                     style={{ display: 'flex', marginTop: 150, flex: 1, height: '100%' }}>
                     <Page1>
                         <div className='text'>
-                            <h1>Sobre o projeto</h1>
+                            <h1>{strings.aboutStrings.page_1.title}</h1>
                             <label>
-                                Projeto surgiu como um meio de poder salvar minhas carteiras no meu computador com segurança, eu acabo entrando em vários projetos, e conectando minha metamask nesses sites muitas vezes não confiáveis,
-                                para isso criei carteiras diferentes para que eu não caia em um <label className='important'>SCAM</label>, ou se cair não perder tudo que possuo, porém com isso acabo tendo que guardar muitas carteiras com suas respectivas palavras seeds, e como guardar elas com segurança?
+                                {strings.aboutStrings.page_1.text}                            
                             </label>
                             <animated.div className='anim' style={move}>
                                 {width >= 600 && (
@@ -155,9 +154,9 @@ export default function About(){
                     }}>
                     <Page2>
                         <div className='text'>
-                            <h1>Seeds</h1>
+                            <h1>{strings.aboutStrings.page_2.title}</h1>
                             <label>
-                                Guardar as seeds no computador é muito perigoso, pois se alguém tiver acesso ao seu computador consegue simplesmente roubar elas e acessar sua carteira.
+                                {strings.aboutStrings.page_2.text}
                             </label>
                         </div>
                         <div className='image'>
@@ -209,10 +208,9 @@ export default function About(){
                             </animated.div>
                         </div>
                         <div className='text'>
-                            <h1>Cold Wallet</h1>
+                            <h1>{strings.aboutStrings.page_3.title}</h1>
                             <label>
-                                Uma alternativa para segurança são as Cold Wallets, que requerem uma confirmação física para transações, porém são muito caras e lentas na comunicação, oque normalmente faz que elas sejam utilizadas
-                                somente para carteiras de Hold.
+                                {strings.aboutStrings.page_3.text}
                             </label>
                         </div>
                     </Page3>
@@ -229,10 +227,9 @@ export default function About(){
                     style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                     <Page4>
                         <div className='text'>
-                            <h1>Wallet Saver</h1>
+                            <h1>{strings.aboutStrings.page_4.title}</h1>
                             <label>
-                                Wallet Saver surgiu como uma alternativa gratuita, simples de utilizar, em poucos passos, ele gera um arquivo com suas palavras
-                                protegidas por cryptografia, totalmente open source com <a href='https://github.com/AguaPotavel/WalletSaver'>repositório no Github</a>
+                                {strings.aboutStrings.page_4.text}
                             </label>
                         </div>
                         <div className='image'>
@@ -261,7 +258,7 @@ export default function About(){
                     style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: theme.colors.primary  }}>
                     <Page5>
                         <div className='text'>
-                            <h1>Assista como funciona</h1>
+                            <h1>{strings.aboutStrings.page_5}</h1>
                             {width >= 600 && (
                                     <div className='player'>
                                         <ReactPlayer url={'https://www.youtube.com/watch?v=-RzTiV18vQk'} controls={true} />
@@ -282,10 +279,9 @@ export default function About(){
                         style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: theme.colors.warning  }}>
                         <Page6>
                             <div className='text'>
-                                <h1 style={{color: theme.colors.secondary_hover}}>ATENÇÃO</h1>
+                                <h1 style={{color: theme.colors.secondary_hover}}>{strings.aboutStrings.page_6.title}</h1>
                                 <label>
-                                    Para a sua proteção e também a minha, o wallet saver, <label className='bold important'>não grava ou salva qualquer informação sobre os dados preenchidos</label>, 
-                                    se você fazer a cryptografia e perder ou esquecer as informações passadas, <label className='bold important'>não existe uma maneira de recupera-los</label> , então esteja ciente da senha e nome que colocar para encryptar suas seeds
+                                    {strings.aboutStrings.page_6.text}                                
                                 </label>
                             </div>
                         </Page6>
@@ -297,9 +293,9 @@ export default function About(){
                         style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: theme.colors.secondary  }}>
                         <Page6>
                             <div className='text'>
-                                <h1>Apoio</h1>
+                                <h1>{strings.aboutStrings.page_7.title}</h1>
                                 <label>
-                                    A aplicação é grátis, porém existe gastos para manter rodando, se você gostaria de ajudar com qualquer quantia (BEP20), essa é a carteira para manutenção do site!
+                                    {strings.aboutStrings.page_7.text}
                                 </label>
                                 <label className='important'>
                                     0x02252D97a08bCfc67166815149A1a282d1C7c026

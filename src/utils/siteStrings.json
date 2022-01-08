@@ -2,20 +2,146 @@
     "pt": {
         "homeStrings":{
             "header": {
-                "title": "Proteja suas carteiras",
-                "description": "De maneira simples e fácil, salve suas palavras passes através de um arquivo encryptado",
-                "button": "Vamos lá"
+                "title": "Proteja suas carteiras!",
+                "description": "De maneira simples e fácil, salve suas palavras passe através de um arquivo encryptado",
+                "button": "Vamos lá!"
             },
             "cards":{
-                "card_1": "Salve todas as suas carteiras, sem tem que salvar as palavras 'seed'.",
-                "card_2": "Totalmente sem custo, pensado para facilitar a vida do usuário comum",
-                "card_3": "Seguro com código aberto no github, livre para acesso"
+                "card_1": "Salve todas as suas carteiras, sem correr o risco de perder suas 'seeds'.",
+                "card_2": "Totalmente sem custo, pensado apenas para facilitar a vida do usuário.",
+                "card_3": "Seguro e com código aberto no github, livre para acesso."
             },
             "works": {
                 "title": "Como funciona?",
-                "description": "Através de uma ferramenta simples, você poderá salvar um arquivo em formato 'txt', com as suas palavras de recuperação da carteira, só que encryptada por uma senha sua!",
+                "description": "Através de uma ferramenta simples, você criará um arquivo em formato 'txt', com as suas palavras de recuperação da carteira. Um arquivo encryptado por uma senha de sua escolha!",
                 "button": "Assista um vídeo!"
+            },
+            "faq": {
+                "faq_title": "Perguntas frequentes",
+                "item_1": {
+                    "question": "É seguro?",
+                    "answer": "Salvando o arquivo cryptografado mesmo que alguém tenha acesso ao seu computador, e tenha  o seu arquivo ele não terá acesso as suas palavras passe, pois não terá sua senha!"
+                },
+                "item_2": {
+                    "question": "Como posso confiar no site?",
+                    "answer": "Wallet Saver não retém qualquer informação sobre as suas palavras de recuperação. O algoritmo simplesmente faz a cryptografia e disponibiliza o download do seu arquivo."
+                },
+                "item_3": {
+                    "question": "Mesmo assim não confio no site, como posso utilizar então?",
+                    "answer": "Nosso código está disponível para verificação no <a>github</a>. Você também pode pegar o site completo e rodar em sua própria máquina localmente sem acesso a internet que ele irá funcionar de qualquer forma!!"
+                }
+            
             }
+        },
+
+        "aboutStrings": {
+            "page_1": {
+                "title": "Sobre o projeto:",
+                "text": "O projeto surgiu com a preocupação de manter minhas carteiras em segurança, já que eu também sou um investidor. E por acabar entrando em vários projetos, e conectando minha metamask nesses sites muitas vezes não confiáveis, criei carteiras diferentes para que eu não caia em um <label className='important'>SCAM</label>, ou caso caia, não perca tudo que possuo. Com isso acabo tendo que salvar muitas carteiras com suas respectivas palavras seeds, então, como guardar elas com segurança?"
+            },
+            "page_2": {
+                "title": "Seeds",
+                "text": "Guardar as seeds no computador ou celular é muito perigoso, pois se alguém acessá-los consegue simplesmente roubá-las e acessar sua carteira."
+            },
+            "page_3": {
+                "title": "Cold Wallet",
+                "text": "Uma alternativa segura seriam as Cold Wallets, que requerem uma confirmação física para transações. Entretanto são muito caras e lentas na comunicação, o que normalmente faz com que elas sejam utilizadas somente para carteiras de Hold."
+            },
+            "page_4": {
+                "title": "Wallet",
+                "text": "Wallet Saver surgiu como uma alternativa gratuita, simples de utilizar. Em poucos passos, ele gera um arquivo com suas palavras 'seed', e este aquivo é cryptografado, protegendo você e suas palavras. Nosso código é totalmente open source com <a href='https://github.com/AguaPotavel/WalletSaver'>repositório no Github.</a>"
+            },
+            "page_5": "Assista como funciona",
+
+            "page_6": {
+                "title": "ATENÇÃO",
+                "text": "Para a sua proteção, e também a minha, o Wallet Saver <label className='bold important'>não grava ou salva qualquer informação sobre os dados preenchidos</label>, se você fizer a cryptografia e perder ou esquecer as informações passadas, <label className='bold important'>não existe uma maneira de recuperá-los</label>, então tenha cuidado com a sua senha e o nome que colocar para encryptar suas seeds."
+            },
+            "page_7": {
+                "title": "Apoio",
+                "text": "A aplicação é grátis para uso público, mas se você quiser contribuir com qualquer quantia para ajudar nosso projeto a se manter (BEP20), essa é a carteira para manutenção do site!"
+            }
+
+        },
+        "generateStrings": {
+            "nome": "Nome:",
+            "nomeDaCarteira": "Nome da Carteira:",
+            "senha": "Senha:",
+            "palavra": "Palavra:"
+        }
+    },
+
+    "en": {
+        "homeStrings":{
+            "header": {
+                "title": "Protect your wallets",
+                "description": "Simple and easy. Save your seeds on an encrypt file.",
+                "button": "Let's go!"
+            },
+            "cards":{
+                "card_1": "Save all your wallets without risking to lose your seeds.",
+                "card_2": "Totally free, designed to ease customers life.",
+                "card_3": "Safe and with an open source code on GitHub, access free!"
+            },
+            "works": {
+                "title": "How does it works?",
+                "description": "Through a simple tool you'll creat a .txt file with your wallet seeds. An encrypt file with a password of your choosing.",
+                "button": "Watch a video!"
+            },
+            "faq": {
+                "faq_title": "Frequently asked questions:",
+                "item_1": {
+                    "question": "Is it safe?",
+                    "answer": "Saving the encrypt file even thogh someone breaks into your computer or smartphone and get a hand on it does not represents any risks because they won't have your password!"
+                },
+                "item_2": {
+                    "question": "Como posso confiar no site?",
+                    "answer": "The Wallet Saver does not retain any information about your seeds. The algorithm simply encrypt and provides your the file download."
+                },
+                "item_3": {
+                    "question": "Even so I don't truste the Wallet Saver, how can I use it then?",
+                    "answer": "Our code is available on our <a>github</a> and you can check it out. You can also get our full website code and run it offline on your own machine and you'll see it works just the same."
+                }
+            
+            }
+        },
+
+        "aboutStrings": {
+            "page_1": {
+                "title": "About us:",
+                "text": "The Wallet Saver project was born from the idea to keep my wallets safe, as I am also an investor. Joining several projects, and conecting my metamask to those websites, many times not so trustful, I created several wallets so i don't get <label className='important'>SCAMED</label> or even if I do, I won't lose it all. And so I need to save many wallets with it's respective seeds, but how to keep them really safe?"
+            },
+            "page_2": {
+                "title": "Seeds",
+                "text": "Keeping your seeds in your computer or smartphone can be dangerous because if someone gets it they can simply steal them and have access to your wallet."
+            },
+            "page_3": {
+                "title": "Cold Wallet",
+                "text": "As an alternarive to enhance your security you could maybe use Cold Wallets, as they require a physical confirmation to complete transactions. Unfortunately they are usually too expensive and the system comunication is really slow, that's why they are mostly used as Hold wallets."
+            },
+            "page_4": {
+                "title": "Wallet",
+                "text": "Wallet Saver comes as a free and simple tool. In few steps it generates a file with your seeds, that file is encrypt, protecting you and your seeds. Our code is totaly open source with a<a href='https://github.com/AguaPotavel/WalletSaver'>Github repository.</a>"
+            },
+            "page_5": "Watch a demonstration of how it works",
+
+            "page_6": {
+                "title": "Heads Up!",
+                "text": "To your protection, and mine, the Wallet Saver <label className='bold important'>does not retain or save any information about the data filled in the form</label>, if you encrypt your data and lose or forget the information given, <label className='bold important'>there is no way to recover it</label>, so take good care of your password and the encryption name you use."
+            },
+            "page_7": {
+                "title": "Support us",
+                "text": "The application is free to the public, but if you wanna help us keep our project running you can donate any amount here(BEP20), this is our site maintenance wallet!"
+            }
+
+        },
+        "generateStrings": {
+            "nome": "Name:",
+            "nomeDaCarteira": "Wallets Name:",
+            "senha": "Password:",
+            "palavra": "Seeds:"
         }
     }
+
+    
 }

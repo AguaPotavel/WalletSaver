@@ -87,25 +87,25 @@ export default function Generate(){
         <ContentForm>
             <div className='item'>
                 <label>
-                    Nome:
+                    {strings.generateStrings.nome}
                 </label>
                 <input placeholder={'Daniel'} value={name} onChange={text => setName(text.target.value)}/>
             </div>
             <div className='item'>
                 <label>
-                    Nome da carteira:
+                    {strings.generateStrings.nomeDaCarteira}
                 </label>
                 <input placeholder={'Metamask Trade'} value={walletName} onChange={text => setWalletName(text.target.value)}/>
             </div>
             <div className='item'>
                 <label>
-                    Senha:
+                    {strings.generateStrings.senha}
                 </label>
                 <input placeholder={'Pjn@k8-l'} type={'password'} value={password} onChange={text => setPassword(text.target.value)}/>
             </div>
             <div className='item'>
                 <label>
-                    Palavra:
+                    {strings.generateStrings.palavra}
                 </label>
                 <div className='add-phrase'>
                     <input placeholder={'unplat'} type={'text'} value={word} onChange={text => setWord(text.target.value)}/>
