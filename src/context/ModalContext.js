@@ -8,7 +8,7 @@ export default function ModalProvider({ children }) {
   const [modalContent, setModalContent] = useState({})
 
   useEffect(() => {
-    console.log(modalContent)
+    //console.log(modalContent)
   }, [modalContent])
 
   return (

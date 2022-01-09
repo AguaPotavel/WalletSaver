@@ -49,12 +49,12 @@ export default function Recover(){
 
 
     const confirm = () => {
-        // console.log('confirmado')
+        // //console.log('confirmado')
         try{
             const data = JSON.parse(encrypted)
             const response = decrypt(name, password, data.seeds, data.validator)
             if(response){
-                console.log(response)
+                //console.log(response)
                 setSeeds(response.seeds)
                 setStringSeeds(response.seeds.join(' '))
 
@@ -83,7 +83,7 @@ export default function Recover(){
     }
 
     useEffect(()=> {
-        console.log(seeds)
+        //console.log(seeds)
     }, [seeds])
 
     useEffect(()=> {

@@ -22,17 +22,17 @@ function decryptWithAESCryptoJS(word, hashPass){
 
 function validatePassWithName(password, name){
     var hash_1 = CryptoJS.SHA256(password);
-    // console.log('hash 1', hash_1.toString(CryptoJS.enc.Base64))
+    // //console.log('hash 1', hash_1.toString(CryptoJS.enc.Base64))
     var hash_2 = CryptoJS.SHA256(name);
     var hash_3 = CryptoJS.SHA256(hash_1.toString(CryptoJS.enc.Base64) + hash_2.toString(CryptoJS.enc.Base64));
-    console.log('hash_1, hash_2, hash_3', hash_1.toString(CryptoJS.enc.Base64), hash_2.toString(CryptoJS.enc.Base64), hash_3.toString(CryptoJS.enc.Base64))
+    // //console.log('hash_1, hash_2, hash_3', hash_1.toString(CryptoJS.enc.Base64), hash_2.toString(CryptoJS.enc.Base64), hash_3.toString(CryptoJS.enc.Base64))
     return hash_3.toString(CryptoJS.enc.Base64)
 }
 
 function validatePassWithHash(password, validator){
     var hash_1 = CryptoJS.SHA256(password);
     var hash_3 = CryptoJS.SHA256(hash_1.toString(CryptoJS.enc.Base64) + validator);
-    console.log('hash_1, hash_2', hash_1.toString(CryptoJS.enc.Base64), hash_3.toString(CryptoJS.enc.Base64))
+    // //console.log('hash_1, hash_2', hash_1.toString(CryptoJS.enc.Base64), hash_3.toString(CryptoJS.enc.Base64))
     return hash_3.toString(CryptoJS.enc.Base64)
 }
 
@@ -54,7 +54,7 @@ export function decrypt(name, password, listEncrypts, validator){
     const hashPasswordWithName = validatePassWithName(password, name)
     const withValidator = validatePassWithHash(password, validator)
 
-    console.log(hashPasswordWithName, withValidator)
+    //console.log(hashPasswordWithName, withValidator)
 
     if(hashPasswordWithName === withValidator){
         let listDecrypted = []
@@ -128,7 +128,7 @@ export function decrypt(name, password, listEncrypts, validator){
 //         }
 //     })
     
-//     console.log(value_1 - value_2)
+//     //console.log(value_1 - value_2)
 
 //     return (value_1 - value_2) === sumValidator
 
@@ -142,7 +142,7 @@ export function decrypt(name, password, listEncrypts, validator){
 
 //     if((separatorStep[0] - wordNumeric[0])%2 === 0){
 //         stepDefiner = true
-//         console.log('par', (separatorStep[0] - wordNumeric[0]))
+//         //console.log('par', (separatorStep[0] - wordNumeric[0]))
 //     }
 
 
@@ -151,11 +151,11 @@ export function decrypt(name, password, listEncrypts, validator){
         
 //     }
 
-//     console.log(wordNumeric, numberLetters)
+//     //console.log(wordNumeric, numberLetters)
 // }
 
 // // defineSeparator('tijuca')
-// // console.log(convertNumberToLetter(2))
+// // //console.log(convertNumberToLetter(2))
 
 // function encrypt(){
 //     const name = 'Pedr+'
@@ -182,7 +182,7 @@ export function decrypt(name, password, listEncrypts, validator){
 //     const separator = defineSeparator(name, password)
 //     const separatorStep = defineSeparator(name, seeds[0])
 
-//     console.log(separator, separatorStep);
+//     //console.log(separator, separatorStep);
 
 //     // validade name and password // 
 //     if(validateNameWithPass(convertWordtoNumbers(name), convertWordtoNumbers(password), sumValidation)){

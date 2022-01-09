@@ -91,7 +91,7 @@ export const Contact = styled.div`
     .icons{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-start;
         min-width: 150px;
         /* background-color: red; */
         margin: 20px 20px 20px 5px;
@@ -103,6 +103,7 @@ export const Contact = styled.div`
 
         .fa{
            opacity: 0.5;
+           margin-right: 10px;
 
            :hover{
                cursor: pointer;

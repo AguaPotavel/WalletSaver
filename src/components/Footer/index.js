@@ -19,9 +19,8 @@ export default function Footer(){
                 <h2>{strings.footer.contact}</h2>
                 <div className='icons'>
                     <FontAwesomeIcon icon={faDiscord} className='fa'/>
-                    <FontAwesomeIcon icon={faGithub} className='fa'/>
-                    <FontAwesomeIcon icon={faTelegram} className='fa'/>
-                    <FontAwesomeIcon icon={faGoogle} className='fa'/>
+                    <FontAwesomeIcon icon={faGithub} className='fa' onClick={()=> 'https://github.com/AguaPotavel/WalletSaver'}/>
+                    <FontAwesomeIcon icon={faTelegram} className='fa' onClick={()=> 'https://t.me/+5mVOUnCE4rQ1NjMx'}/>
                 </div>
             </Contact>
             <SelectLang>

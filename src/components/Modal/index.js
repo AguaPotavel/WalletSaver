@@ -52,7 +52,7 @@ export function Modal({setShowModal, modalContent}){
             setEncrypted(encrypt(modalContent.name, modalContent.password, modalContent.seeds))
             setTimeout(()=> nextStep(), 1800)
         }
-        console.log('stepConfirmation:', stepConfirmation)
+        //console.log('stepConfirmation:', stepConfirmation)
     }, [stepConfirmation])
 
     function copyToClipboard(e) {

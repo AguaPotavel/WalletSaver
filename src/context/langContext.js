@@ -14,13 +14,13 @@ export default function LangProvider({ children }) {
   useEffect(() => {
     const langStorage = localStorage.getItem("lang");
     if(langStorage){
-      console.log('exist storage', langStorage)
+      //console.log('exist storage', langStorage)
       setLang(langStorage)
       strings.setLanguage(langStorage);
     }else{
         localStorage.setItem("lang","en");
         strings.setLanguage("en");
-        console.log('dont exist storage, creating')
+        //console.log('dont exist storage, creating')
     }
   }, [])
 
