@@ -269,12 +269,12 @@ export default function About(){
                             <h1>{strings.aboutStrings.page_5}</h1>
                             {width >= 600 && (
                                     <div className='player'>
-                                        <ReactPlayer url={'https://www.youtube.com/watch?v=-RzTiV18vQk'} controls={true} />
+                                        {/* <ReactPlayer url={'https://www.youtube.com/watch?v=-RzTiV18vQk'} controls={true} /> */}
                                     </div>
                                 )}
                                 {width < 600 && (
                                     <div className='player'>
-                                        <ReactPlayer url={'https://www.youtube.com/watch?v=-RzTiV18vQk'} controls={true} width={300} height={200}/>
+                                        {/* <ReactPlayer url={'https://www.youtube.com/watch?v=-RzTiV18vQk'} controls={true} width={300} height={200}/> */}
                                     </div>
                                 )}
                             

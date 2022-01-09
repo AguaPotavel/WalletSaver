@@ -54,7 +54,7 @@ export function decrypt(name, password, listEncrypts, validator){
     const hashPasswordWithName = validatePassWithName(password, name)
     const withValidator = validatePassWithHash(password, validator)
 
-    //console.log(hashPasswordWithName, withValidator)
+    console.log(hashPasswordWithName, withValidator)
 
     if(hashPasswordWithName === withValidator){
         let listDecrypted = []

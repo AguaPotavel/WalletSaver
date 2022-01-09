@@ -12,15 +12,19 @@ import { useLang } from '../../context/langContext'
 export default function Footer(){
     const { strings, setLang } = useLang()
 
+    const openUrl = (url) => {
+        var win = window.open(url, '_blank');
+    } 
+
     return(
     <Container>
         <div className={'left'}>
             <Contact>
                 <h2>{strings.footer.contact}</h2>
                 <div className='icons'>
-                    <FontAwesomeIcon icon={faDiscord} className='fa'/>
-                    <FontAwesomeIcon icon={faGithub} className='fa' onClick={()=> 'https://github.com/AguaPotavel/WalletSaver'}/>
-                    <FontAwesomeIcon icon={faTelegram} className='fa' onClick={()=> 'https://t.me/+5mVOUnCE4rQ1NjMx'}/>
+                    <FontAwesomeIcon icon={faDiscord} className='fa'onClick={()=> openUrl('https://discord.gg/fZ3RCwng')} />
+                    <FontAwesomeIcon icon={faGithub} className='fa' onClick={()=> openUrl('https://github.com/AguaPotavel/WalletSaver')}/>
+                    <FontAwesomeIcon icon={faTelegram} className='fa' onClick={()=> openUrl('https://t.me/+5mVOUnCE4rQ1NjMx')}/>
                 </div>
             </Contact>
             <SelectLang>

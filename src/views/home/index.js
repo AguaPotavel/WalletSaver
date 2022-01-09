@@ -65,6 +65,10 @@ export default function Home(){
         }
       };
 
+    const openUrl = (url) => {
+        var win = window.open(url, '_blank');
+    } 
+
     return(<>
     <Navbar/>
     <Container>
@@ -76,7 +80,7 @@ export default function Home(){
                 <label>
                     {strings.homeStrings.header.description}
                 </label>
-                <button className='button'>
+                <button className='button' onClick={openUrl('/generate')}>
                     {strings.homeStrings.header.button}
                 </button>
             </animated.div>

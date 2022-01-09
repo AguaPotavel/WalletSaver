@@ -15,7 +15,7 @@ export default function Contact(){
         <Container>
             <ListIcons>
                 <li>
-                    <a>
+                    <a href='https://discord.gg/fZ3RCwng'>
                         <FontAwesomeIcon icon={faDiscord} size='1x' className='fa'/>
                     </a>
                 </li>
