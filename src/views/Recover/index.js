@@ -23,6 +23,9 @@ import { BackgroundRecover } from '../../components/AnimatedBackground';
 // Decrypt function // 
 import { decrypt } from '../../utils/encrypt';
 
+// localization //
+import { useLang } from '../../context/langContext';
+
 
 export default function Recover(){
     const [ name, setName ] = useState('')
@@ -30,6 +33,19 @@ export default function Recover(){
     const [ encrypted, setEncrypted] = useState('')
     const [ seeds, setSeeds ] = useState('')
     const [ stringSeeds, setStringSeeds] = useState('')
+    const { strings, lang } = useLang()
+    strings.setLanguage(lang)
+
+    const [ toastPassword, setToastPassword] = useState(strings.generic.wrongPassword)
+    const [ toastAlert, setToastAlert] = useState(strings.generic.phishingAlert)
+    const [ toastJson, setToastJson] = useState(strings.generic.wrongJson)
+
+    useEffect(()=> {
+        strings.setLanguage(lang)
+        setToastPassword(strings.generic.wrongPassword)
+        setToastAlert(strings.generic.phishingAlert)
+        setToastJson(strings.generic.wrongJson)
+    }, [lang])
 
 
     const confirm = () => {
@@ -43,7 +59,7 @@ export default function Recover(){
                 setStringSeeds(response.seeds.join(' '))
 
             }else{
-                toast.dark('Senha ou nome inválido!', {
+                toast.dark(toastPassword, {
                     position: "top-right",
                     autoClose: 5000,
                     hideProgressBar: false,
@@ -54,7 +70,7 @@ export default function Recover(){
                     });
             }
         }catch(e){
-            toast.dark('Envie um Json válido', {
+            toast.dark(toastJson, {
                 position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -71,7 +87,7 @@ export default function Recover(){
     }, [seeds])
 
     useEffect(()=> {
-        toast.dark('Sempre verifique se está no dominio correto: https://walletsaver.io', {
+        toast.dark(toastAlert, {
             position: "top-center",
             autoClose: 5000,
             hideProgressBar: false,
@@ -89,25 +105,25 @@ export default function Recover(){
         <ContentForm>
             <div className='item'>
                 <label>
-                    Nome:
+                    {strings.recoverStrings.name}:
                 </label>
-                <input placeholder={'Daniel'} value={name} onChange={text => setName(text.target.value)}/>
+                <input placeholder={'Clóvis'} value={name} name="name" onChange={text => setName(text.target.value)}/>
             </div>
             <div className='item'>
                 <label>
-                    Senha:
+                    {strings.recoverStrings.password}:
                 </label>
-                <input placeholder={'Pjn@k8-l'} type={'password'} value={password} onChange={text => setPassword(text.target.value)}/>
+                <input placeholder={'Pjn@k8-l'} type={'password'} name="password" value={password} onChange={text => setPassword(text.target.value)}/>
             </div>
             <div className='item'>
                 <label>
                     Json:
                 </label>
-                <textarea placeholder='Json encryptado aqui!' value={encrypted} onChange={text => setEncrypted(text.target.value)}/>
+                <textarea placeholder={strings.recoverStrings.jsonPlaceholder} value={encrypted} onChange={text => setEncrypted(text.target.value)}/>
             </div>
             
             <div className='item'>
-                <ButtonPrimary text={'confirmar'} action={confirm} />
+                <ButtonPrimary text={strings.generic.confirm} action={confirm} />
             </div>
 
             {stringSeeds !== '' && (

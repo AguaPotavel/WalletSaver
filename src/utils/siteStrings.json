@@ -28,7 +28,7 @@
                 },
                 "item_3": {
                     "question": "Mesmo assim não confio no site, como posso utilizar então?",
-                    "answer": "Nosso código está disponível para verificação no <a>github</a>. Você também pode pegar o site completo e rodar em sua própria máquina localmente sem acesso a internet que ele irá funcionar de qualquer forma!!"
+                    "answer": "Nosso código está disponível para verificação no github. Você também pode pegar o site completo e rodar em sua própria máquina localmente sem acesso a internet que ele irá funcionar de qualquer forma!!"
                 }
             
             }
@@ -37,7 +37,7 @@
         "aboutStrings": {
             "page_1": {
                 "title": "Sobre o projeto:",
-                "text": "O projeto surgiu com a preocupação de manter minhas carteiras em segurança, já que eu também sou um investidor. E por acabar entrando em vários projetos, e conectando minha metamask nesses sites muitas vezes não confiáveis, criei carteiras diferentes para que eu não caia em um <label className='important'>SCAM</label>, ou caso caia, não perca tudo que possuo. Com isso acabo tendo que salvar muitas carteiras com suas respectivas palavras seeds, então, como guardar elas com segurança?"
+                "text": "O projeto surgiu com a preocupação de manter minhas carteiras em segurança, já que eu também sou um investidor. E por acabar entrando em vários projetos, e conectando minha metamask nesses sites muitas vezes não confiáveis, criei carteiras diferentes para que eu não caia em um SCAM, ou caso caia, não perca tudo que possuo. Com isso acabo tendo que salvar muitas carteiras com suas respectivas palavras seeds, então, como guardar elas com segurança?"
             },
             "page_2": {
                 "title": "Seeds",
@@ -49,13 +49,13 @@
             },
             "page_4": {
                 "title": "Wallet",
-                "text": "Wallet Saver surgiu como uma alternativa gratuita, simples de utilizar. Em poucos passos, ele gera um arquivo com suas palavras 'seed', e este aquivo é cryptografado, protegendo você e suas palavras. Nosso código é totalmente open source com <a href='https://github.com/AguaPotavel/WalletSaver'>repositório no Github.</a>"
+                "text": "Wallet Saver surgiu como uma alternativa gratuita, simples de utilizar. Em poucos passos, ele gera um arquivo com suas palavras 'seed', e este aquivo é cryptografado, protegendo você e suas palavras. Nosso código é totalmente open source com repositório no Github."
             },
             "page_5": "Assista como funciona",
 
             "page_6": {
                 "title": "ATENÇÃO",
-                "text": "Para a sua proteção, e também a minha, o Wallet Saver <label className='bold important'>não grava ou salva qualquer informação sobre os dados preenchidos</label>, se você fizer a cryptografia e perder ou esquecer as informações passadas, <label className='bold important'>não existe uma maneira de recuperá-los</label>, então tenha cuidado com a sua senha e o nome que colocar para encryptar suas seeds."
+                "text": "Para a sua proteção, e também a minha, o Wallet Saver não grava ou salva qualquer informação sobre os dados preenchidos, se você fizer a cryptografia e perder ou esquecer as informações passadas, não existe uma maneira de recuperá-los, então tenha cuidado com a sua senha e o nome que colocar para encryptar suas seeds."
             },
             "page_7": {
                 "title": "Apoio",
@@ -68,6 +68,42 @@
             "nomeDaCarteira": "Nome da Carteira:",
             "senha": "Senha:",
             "palavra": "Palavra:"
+        },
+        "recoverStrings": {
+            "name": "Nome",
+            "password": "Senha",
+            "jsonPlaceholder": "Json encryptado aqui"
+        },
+        "navbar": {
+            "generate": "Encriptar",
+            "recover": "Desencriptar",
+            "about": "Sobre",
+            "contact": "Contato"
+        },
+        "footer": {
+            "contact": "Contato",
+            "support": "Apoio"
+        },
+        "generic":{
+            "modal": {
+                "step_0": {
+                    "name": "nome",
+                    "walletName": "Nome da carteira",
+                    "password": "Senha",
+                    "words": "Palavras",
+                    "confirm": "Confirmar"
+                },
+                "step_1": {
+                    "title": "Encriptado",
+                    "description": "Párabens, você está mais protegido, mas não se engane, permaneça mantendo cuidado e guardando sua carteira em local seguro :)",
+                    "copy": "Copiar",
+                    "close": "Fechar"
+                }
+            },
+            "phishingAlert": "Sempre verifique se está no domínio correto: https://wallet-saver.com",
+            "confirm": "Confirmar",
+            "wrongPassword": "Senha ou nome inválido",
+            "wrongJson": "json inválido"
         }
     },
 
@@ -95,12 +131,12 @@
                     "answer": "Saving the encrypt file even thogh someone breaks into your computer or smartphone and get a hand on it does not represents any risks because they won't have your password!"
                 },
                 "item_2": {
-                    "question": "Como posso confiar no site?",
+                    "question": "How can I trust the Wallet Saver?",
                     "answer": "The Wallet Saver does not retain any information about your seeds. The algorithm simply encrypt and provides your the file download."
                 },
                 "item_3": {
                     "question": "Even so I don't truste the Wallet Saver, how can I use it then?",
-                    "answer": "Our code is available on our <a>github</a> and you can check it out. You can also get our full website code and run it offline on your own machine and you'll see it works just the same."
+                    "answer": "Our code is available on our github and you can check it out. You can also get our full website code and run it offline on your own machine and you'll see it works just the same."
                 }
             
             }
@@ -121,13 +157,13 @@
             },
             "page_4": {
                 "title": "Wallet",
-                "text": "Wallet Saver comes as a free and simple tool. In few steps it generates a file with your seeds, that file is encrypt, protecting you and your seeds. Our code is totaly open source with a<a href='https://github.com/AguaPotavel/WalletSaver'>Github repository.</a>"
+                "text": "Wallet Saver comes as a free and simple tool. In few steps it generates a file with your seeds, that file is encrypt, protecting you and your seeds. Our code is totaly open source with a Github repository."
             },
             "page_5": "Watch a demonstration of how it works",
 
             "page_6": {
                 "title": "Heads Up!",
-                "text": "To your protection, and mine, the Wallet Saver <label className='bold important'>does not retain or save any information about the data filled in the form</label>, if you encrypt your data and lose or forget the information given, <label className='bold important'>there is no way to recover it</label>, so take good care of your password and the encryption name you use."
+                "text": "To your protection, and mine, the Wallet Saver does not retain or save any information about the data filled in the form, if you encrypt your data and lose or forget the information given, there is no way to recover it, so take good care of your password and the encryption name you use."
             },
             "page_7": {
                 "title": "Support us",
@@ -140,6 +176,42 @@
             "nomeDaCarteira": "Wallets Name:",
             "senha": "Password:",
             "palavra": "Seeds:"
+        },
+        "recoverStrings": {
+            "name": "Name",
+            "password": "Password",
+            "jsonPlaceholder": "Encrypted Json here"
+        },
+        "navbar": {
+            "generate": "Encrypt",
+            "recover": "Decrypt",
+            "about": "About",
+            "contact": "Contact"
+        },
+        "footer": {
+            "contact": "Contact",
+            "support": "Support"
+        },
+        "generic":{
+            "modal": {
+                "step_0": {
+                    "name": "Name",
+                    "walletName": "Wallet Name",
+                    "password": "Password",
+                    "words": "Words",
+                    "confirm": "Confirm"
+                },
+                "step_1": {
+                    "title": "Encrypted",
+                    "description": "Good",
+                    "copy": "Copy",
+                    "close": "Close"
+                }
+            },
+            "phishingAlert": "Always verify if you are on the correct domain: https://wallet-saver.com",
+            "confirm": "Confirm",
+            "wrongPassword": "Password or name invalid",
+            "wrongJson": "Wrong Json"
         }
     }
 

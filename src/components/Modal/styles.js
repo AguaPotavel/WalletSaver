@@ -94,7 +94,8 @@ export const ModalConfirmEncryption = styled.div`
             font-size: 1rem;
             font-weight: normal;
             color: ${props=> props.theme.colors.secondary_hover};
-            text-align: justify;
+            text-align: center;
+            min-width: 350px;
         }
 
         textarea{

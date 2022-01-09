@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import {
     Container,
@@ -35,17 +35,16 @@ import { faBitcoin, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { BackgroundHome } from '../../components/AnimatedBackground'
 
 // Localization //
-import LocalizedStrings from 'react-localization';
-import siteStrings from '../../utils/siteStrings.json'
-let strings = new LocalizedStrings(
-    siteStrings
-   );
-strings.setLanguage('pt')
+import { useLang } from '../../context/langContext'
 
 
 export default function Home(){
 
     const theme = useTheme()
+
+    const { strings, lang } = useLang()
+    
+    strings.setLanguage(lang)
 
     const breath = useSpring({
         to: { y: 0,},

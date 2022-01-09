@@ -20,20 +20,20 @@ export default function Contact(){
                     </a>
                 </li>
                 <li>
-                    <a>
+                    <a href='https://github.com/AguaPotavel/WalletSaver'>
                         <FontAwesomeIcon icon={faGithubAlt} size='1x' className='fa'/>
                     </a>
                 </li>
                 <li>
-                    <a>
+                    <a href='https://t.me/+5mVOUnCE4rQ1NjMx'>
                         <FontAwesomeIcon icon={faTelegram} size='1x' className='fa'/>
                     </a>
                 </li>
-                <li>
+                {/* <li>
                     <a>
                         <FontAwesomeIcon icon={faGoogle} size='1x' className='fa'/>
                     </a>
-                </li>
+                </li> */}
             </ListIcons>
         </Container>
     <Footer/>

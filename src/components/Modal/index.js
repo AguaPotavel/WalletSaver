@@ -27,16 +27,25 @@ import { encrypt } from '../../utils/encrypt'
 // navigation //
 import { useNavigate } from "react-router-dom";
 
+// localization //
+import { useLang } from '../../context/langContext'
+
 
 export function Modal({setShowModal, modalContent}){
     const [stepConfirmation, setStepConfirmation] = useState(0)
     const [copySuccess, setCopySuccess] = useState('');
     const [encrypted, setEncrypted] = useState({})
     const textAreaRef = useRef(null);
+    const { strings, lang } = useLang()
+    strings.setLanguage(lang)
 
     const nextStep = () => {
         setStepConfirmation(stepConfirmation + 1)
     }
+
+    useEffect(()=> {
+        strings.setLanguage(lang)
+    }, [lang])
 
     useEffect(()=> {
         if(stepConfirmation === 1){
@@ -72,22 +81,6 @@ export function Modal({setShowModal, modalContent}){
     }
 
     const navigate = useNavigate()
-
-    function PhishingAlert(){
-        return(<>
-        <ModalPhishingAlert>
-            <div className='close-button' onClick={()=> setShowModal(false)}>
-                <FontAwesomeIcon icon={faTimes} size='1x' color={theme.colors.primary}/>
-            </div>
-            <h2>
-                Cuidado!
-            </h2>
-            <label>
-                Sempre antes de preencher qualquer dado verifique se realmente está no domínio correto, <a>https://walletsaver.io</a>
-            </label>
-        </ModalPhishingAlert>
-        </>)
-    }
     
     function EncryptionConfirm(){
         return(<>
@@ -97,25 +90,25 @@ export function Modal({setShowModal, modalContent}){
             </div>
             <div className='items'>
                 <div className='item'>
-                    <label className='header'>NOME</label>
+                    <label className='header'>{strings.generic.modal.step_0.name}</label>
                     <label>{modalContent.name}</label>
                 </div>
                 <div className='item'>
-                    <label className='header'>NOME DA CARTEIRA</label>
+                    <label className='header'>{strings.generic.modal.step_0.walletName}</label>
                     <label>{modalContent.walletName}</label>
                 </div>
                 <div className='item'>
-                    <label className='header'>SENHA</label>
+                    <label className='header'>{strings.generic.modal.step_0.password}</label>
                     <label>{modalContent.password}</label>
                 </div>
                 <div className='item'>
-                    <label className='header'>PALAVRAS</label>
+                    <label className='header'>{strings.generic.modal.step_0.words}</label>
                     <label>{modalContent.seeds.map((w)=> {
                         return w.phrase + ' '
                     })}</label>
                 </div>
                 <div className='item button'>
-                    <ButtonPrimary text={'Confirmar'} action={nextStep}/>
+                    <ButtonPrimary text={strings.generic.modal.step_0.confirm} action={nextStep}/>
                 </div>
             </div>
         </ModalConfirmEncryption>
@@ -129,16 +122,14 @@ export function Modal({setShowModal, modalContent}){
         <ModalConfirmEncryption className={stepConfirmation === 2 ? '' : 'hide'}>
                 <div className='confirmed'>
                     <label className='title'>
-                        Encryptado!
+                        {strings.generic.modal.step_1.title} 
                     </label>
                     <label className='description'>
-                        Párabens, você está mais protegido, mas não se engane,
-                        permaneça mantendo cuidado e guardando sua carteira em
-                        local seguro :)
+                        {strings.generic.modal.step_1.description} 
                     </label>
                     <textarea ref={textAreaRef} value={JSON.stringify(encrypted)} readOnly/>
                     <div className='button-confirm'>
-                        {copySuccess != '' ? <ButtonSecondary text={'Fechar'} action={end}/>: <ButtonPrimary text={'copiar'} icon={'copy'} action={copyToClipboard}/>}                       
+                        {copySuccess != '' ? <ButtonSecondary text={strings.generic.modal.step_1.close } action={end}/>: <ButtonPrimary text={strings.generic.modal.step_1.copy } icon={'copy'} action={copyToClipboard}/>}                       
                     </div>
                 </div>
         </ModalConfirmEncryption>

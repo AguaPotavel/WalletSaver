@@ -28,6 +28,9 @@ import { ButtonPrimary } from '../../components/Buttons'
 // context //
 import { useModal } from '../../context/ModalContext'
 
+// localization //
+import { useLang } from '../../context/langContext';
+
 export default function Generate(){
     const [name, setName] = useState('');
     const [walletName, setWalletName] = useState('')
@@ -35,9 +38,15 @@ export default function Generate(){
     const [word, setWord] = useState('')
     const [seeds, setSeeds] = useState([])
     const { setShowModal, showModal, setModalContent } = useModal()
+    const { strings, lang } = useLang()
+    strings.setLanguage(lang)
 
     useEffect(()=> {
-        toast.dark('Sempre verifique se está no dominio correto: https://walletsaver.io', {
+        strings.setLanguage(lang)
+    }, [lang])
+
+    useEffect(()=> {
+        toast.dark(strings.generic.phishingAlert, {
             position: "top-center",
             autoClose: 5000,
             hideProgressBar: false,
@@ -89,7 +98,7 @@ export default function Generate(){
                 <label>
                     {strings.generateStrings.nome}
                 </label>
-                <input placeholder={'Daniel'} value={name} onChange={text => setName(text.target.value)}/>
+                <input placeholder={'Clóvis'} value={name} name="name" onChange={text => setName(text.target.value)}/>
             </div>
             <div className='item'>
                 <label>
@@ -101,7 +110,7 @@ export default function Generate(){
                 <label>
                     {strings.generateStrings.senha}
                 </label>
-                <input placeholder={'Pjn@k8-l'} type={'password'} value={password} onChange={text => setPassword(text.target.value)}/>
+                <input placeholder={'Pjn@k8-l'} type={'password'} name="password" value={password} onChange={text => setPassword(text.target.value)}/>
             </div>
             <div className='item'>
                 <label>
@@ -122,7 +131,7 @@ export default function Generate(){
                 </div>
             </div>
             <div className='item'>
-                <ButtonPrimary text={'confirmar'} action={confirm} />
+                <ButtonPrimary text={strings.generic.confirm} action={confirm} />
             </div>
             
         </ContentForm>

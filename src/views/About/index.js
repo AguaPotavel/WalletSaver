@@ -39,6 +39,10 @@ import { useTheme } from 'styled-components'
 import { ButtonPrimary } from '../../components/Buttons'
 
 
+// Localization //
+import { useLang } from '../../context/langContext'
+
+
 
 export default function About(){
     const [height, setHeight] = useState();
@@ -102,6 +106,10 @@ export default function About(){
             mass: 5, tension: 350, friction: 0, duration: 800
         }
     })
+
+    const { strings, lang } = useLang()
+    
+    strings.setLanguage(lang)
 
 
     return(

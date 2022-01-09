@@ -3,15 +3,18 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     display: flex;
-    height: 150px;
+    flex-direction: column;
+    height: 380px;
+    /* padding: 0px 5% */
     background-color: ${props=> props.theme.colors.primary};
     flex-wrap: wrap;
     
     .left{
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
         flex: 1;
-        justify-content: flex-end;
+        justify-content: flex-start;
         align-items: flex-start;
         //background-color: red;
         margin-left: 10%;
@@ -41,6 +44,16 @@ export const Container = styled.div`
 
         .left{
             margin-left: 5%;
+
+            .item:nth-child(2){
+                align-items: flex-end;
+            }
+
+            .item{
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+            }
         }
 
         .right{
@@ -53,7 +66,6 @@ export const Contact = styled.div`
     display: flex;
     flex-direction: column;
     margin: 20px 0px;
-    
 
     h2{
         font-size: 1.2rem;
@@ -108,4 +120,60 @@ export const Contact = styled.div`
     {
         min-width: 100px;
     }
+`;
+
+
+export const SelectLang = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 20px 0px;
+    margin-right: 5%;
+
+    h2{
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+        color: ${props=> props.theme.colors.surface_3};
+        font-weight: bold;
+        margin: 0px 5px;
+        /* text-align: end;  */
+    }
+
+    .icons{
+        display: flex;
+        flex-direction: row;
+        /* justify-content: flex-end; */
+        min-width: 150px;
+        /* background-color: red; */
+        margin: 20px 20px 20px 5px;
+
+
+        a.lang {
+        opacity: 0.5;
+        font-size: 1rem;
+        line-height: 1rem;
+        color: ${props=> props.theme.colors.surface_3};
+        font-weight: bold;
+        margin-right: 5px;
+
+            &:hover{
+                cursor: pointer;
+                opacity: 1;
+            }
+        }
+
+        
+
+        @media (max-width: 600px)
+        {
+            min-width: 100px;
+        }
+    }
+
+
+    @media (max-width: 600px)
+    {
+        min-width: 100px;
+    }
+
 `;

@@ -22,24 +22,28 @@ import Footer from "./components/Footer";
 
 // import { useLocation } from 'react-router-dom'
 
+import LangProvider from "./context/langContext";
+
 function App() {
   // const location = useLocation()
   // console.log(location.pathname)
   return (
     <BrowserRouter>
-    <ModalProvider>
-      <div>
-      {/* <Navbar/> */}
-        <Routes>
-          <Route exact path="/" element={ <Home/>}/>
-          <Route path="/generate" element={<Generate />} />
-          <Route path="/recover" element={<Recover />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-        {/* <Footer/> */}
-      </div>
-      </ModalProvider>
+    <LangProvider>
+      <ModalProvider>
+        <div>
+          {/* <Navbar/> */}
+            <Routes>
+              <Route exact path="/" element={ <Home/>}/>
+              <Route path="/generate" element={<Generate />} />
+              <Route path="/recover" element={<Recover />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+            {/* <Footer/> */}
+          </div>
+        </ModalProvider>
+      </LangProvider>
     </BrowserRouter>
   );
 }

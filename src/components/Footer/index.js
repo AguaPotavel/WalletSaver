@@ -1,18 +1,22 @@
 import {
     Container,
-    Contact
+    Contact,
+    SelectLang
 } from './styles'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDiscord, faGithub, faTelegram, faGoogle } from '@fortawesome/free-brands-svg-icons'
+import { useLang } from '../../context/langContext'
 
 
 export default function Footer(){
+    const { strings, setLang } = useLang()
+
     return(
     <Container>
-        <div className='left'>
+        <div className={'left'}>
             <Contact>
-                <h2>Contato</h2>
+                <h2>{strings.footer.contact}</h2>
                 <div className='icons'>
                     <FontAwesomeIcon icon={faDiscord} className='fa'/>
                     <FontAwesomeIcon icon={faGithub} className='fa'/>
@@ -20,12 +24,17 @@ export default function Footer(){
                     <FontAwesomeIcon icon={faGoogle} className='fa'/>
                 </div>
             </Contact>
-        </div>
-        <div className='right'>
-        <Contact>
-                <h2>Apoio</h2>
+            <SelectLang>
+                <h2>Language</h2>
+                <div className='icons'>
+                    <a className={'lang'} onClick={()=> setLang('pt')}>BR</a>
+                    <a className={'lang'} onClick={()=> setLang('en')}>EN</a>
+                </div>
+            </SelectLang>
+            <Contact>
+                <h2>{strings.footer.support}</h2>
                 <label>
-                    Carteira (BEP20): 0x02252D97a08bCfc67166815149A1a282d1C7c026
+                    (BEP20, ERC20): 0x02252D97a08bCfc67166815149A1a282d1C7c026
                 </label>
             </Contact>
         </div>

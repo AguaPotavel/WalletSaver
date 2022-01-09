@@ -11,6 +11,8 @@ import Hamburger from './Hamburger'
 
 import { useTheme } from 'styled-components';
 
+import { useLang } from '../../context/langContext';
+
 
 
 export default function Navbar(){
@@ -18,6 +20,7 @@ export default function Navbar(){
     const [width, setWidth] = useState();
     const [showNav, setShowNav] = useState('');
     const theme = useTheme()
+    const { strings } = useLang();
 
     function getWindowDimensions() {
         const { innerWidth: width, innerHeight: height } = window;
@@ -47,16 +50,16 @@ export default function Navbar(){
 
         <div className='itens'>
             <a href='/generate'>
-                Generate
+                {strings.navbar.generate}
             </a>
             <a href='/recover'>
-                Recover
+                {strings.navbar.recover}
             </a>
             <a href='/about'>
-                About
+                {strings.navbar.about}
             </a>
             <a href='/contact'>
-                Contact
+                {strings.navbar.contact}
             </a>
         </div>
     </Container>:
