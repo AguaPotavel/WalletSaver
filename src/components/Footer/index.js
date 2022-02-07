@@ -12,8 +12,8 @@ import { useLang } from '../../context/langContext'
 export default function Footer(){
     const { strings, setLang } = useLang()
 
-    const openUrl = (url) => {
-        var win = window.open(url, '_blank');
+    function openUrl(url){
+        window.open(url, '_blank');
     } 
 
     return(
