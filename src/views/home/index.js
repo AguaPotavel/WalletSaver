@@ -80,7 +80,7 @@ export default function Home(){
                 <label>
                     {strings.homeStrings.header.description}
                 </label>
-                <button className='button' onClick={openUrl('/generate')}>
+                <button className='button' onClick={()=> openUrl('/generate')}>
                     {strings.homeStrings.header.button}
                 </button>
             </animated.div>
